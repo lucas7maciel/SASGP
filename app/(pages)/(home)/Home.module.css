@@ -1,0 +1,81 @@
+
+.oval-gradient {
+    animation: set-oval-gradient 0.7s ease-out;
+}
+
+.bottom-gradient {
+    animation: set-bottom-gradient 1.25s ease-out;
+}
+
+.title {
+    animation: set-text 0.75s backwards;
+    animation-delay: 0.3s;
+}
+
+.subtitle {
+    animation: set-text 0.75s backwards;
+    animation-delay: 0.5s;
+}
+
+.main-card {
+    animation: set-card 0.75s backwards;
+    animation-delay: 0.5s;
+}
+
+.secondary-card {
+    animation: set-card 1s backwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes set-oval-gradient {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes set-bottom-gradient {
+    from {
+        transform: translateY(100%);
+    } to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes set-text {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes set-card {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

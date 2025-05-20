@@ -1,0 +1,28 @@
+
+:root {
+    --carousel-duration: 10s;
+}
+
+.carousel {
+    animation: back var(--carousel-duration) infinite linear;
+}
+
+.carousel.after {
+    animation: back-after var(--carousel-duration) infinite linear;
+}
+
+@keyframes back {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes back-after {
+    from {
+        transform: translateX(100%);
+    } to {
+        transform: translateX(0);
+    }
+}
