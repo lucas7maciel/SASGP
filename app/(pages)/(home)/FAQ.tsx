@@ -7,7 +7,7 @@ export function FAQ() {
   return (
     <div className="py-20 px-16 text-center">
       <h1 className="font-bold text-3xl">Perguntas Frequentes</h1>
-      <h2 className="font-semibold text-lg w-[40ch] mx-auto mt-1">
+      <h2 className="font-semibold text-lg max-w-[40ch] mx-auto mt-1">
         Aqui você vai encontrar respostas para dúvidas comuns entre potenciais
         clientes da SASGP
       </h2>

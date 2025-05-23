@@ -13,8 +13,8 @@ export function Sections() {
 
   return (
     <div className="flex-center min-h-[80vh] px-12 py-8 bg-primary">
-      <div className="flex items-stretch w-[80%] min-h-[60vh]">
-        <div className="flex flex-col justify-center">
+      <div className="flex flex-col md:flex-row gap-y-3.5 items-stretch w-[80%] min-h-[60vh]">
+        <div className="flex flex-col justify-center gap-y-1 md:gap-y-0">
           {sections.map((section) => (
             <Section
               key={section}
@@ -41,8 +41,8 @@ const Section = (props: {
     <div
       className={`
         relative cursor-pointer flex-center font-bold 
-        p-2 rounded-l-lg transition-all overflow-visible
-        ${props.selected ? "bg-tertiary" : "text-tertiary"}`}
+        p-2 rounded-lg md:rounded-none md:rounded-l-lg transition-all overflow-visible
+        ${props.selected ? "bg-tertiary" : "text-tertiary hover:bg-primary-40"}`}
       onClick={() => props.onClick()}
     >
       {props.title}
@@ -50,10 +50,10 @@ const Section = (props: {
       {/* Borda decorativa */}
       {props.selected && (
         <>
-          <div className="transition-all transition-none absolute top-[100%] right-0 bg-tertiary w-3 aspect-square overflow-hidden">
-            <div className="absolute top-[-5px] right-[-5px] w-[200%] rounded-tr-full bg-primary aspect-square"></div>
+          <div className="hidden md:block transition-all absolute top-[100%] right-0 bg-tertiary w-3 aspect-square overflow-hidden">
+            <div className={`absolute top-[-5px] right-[-5px] w-[200%] rounded-tr-full bg-primary aspect-square`}></div>
           </div>
-          <div className="transition-all transition-none absolute bottom-[100%] right-0 bg-tertiary w-3 aspect-square overflow-hidden">
+          <div className="hidden md:block transition-all absolute bottom-[100%] right-0 bg-tertiary w-3 aspect-square overflow-hidden">
             <div className="absolute bottom-[-5px] right-[-5px] w-[200%] rounded-br-full bg-primary aspect-square"></div>
           </div>
         </>

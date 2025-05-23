@@ -11,7 +11,7 @@ export function Tender() {
       </p>
 
       <Link href="/tender">
-        <p className="bg-tertiary text-primary font-bold text-2xl px-5 py-2.5 rounded-full shadow-2xl">
+        <p className="bg-tertiary text-primary font-bold text-2xl text-center px-5 py-2.5 rounded-full shadow-2xl">
           Fazer um orçamento
         </p>
       </Link>
