@@ -1,3 +1,4 @@
+import { Location } from "../localization";
 import { FAQ } from "./FAQ";
 import { HomeSection } from "./Home";
 import { PartnerShips } from "./Partnerships";
@@ -9,6 +10,7 @@ export default function Home() {
     <div className="w-full">
       <HomeSection />
       <Sections />
+      <Location />
       <Tender />
       <PartnerShips />
       <FAQ />
