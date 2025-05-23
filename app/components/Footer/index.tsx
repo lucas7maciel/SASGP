@@ -20,6 +20,15 @@ export function Footer() {
               />
             </div>
             <p className="font-bold text-4xl md:text-3xl text-tertiary">SASGP</p>
+            <div className="relative w-13 h-20">
+              <Image
+                className="absolute-center w-[56rem]"
+                src="/gptw.svg"
+                alt="SASGP"
+                width={200}
+                height={311}
+              />
+            </div>
           </div>
 
           {/* Endereço */}
