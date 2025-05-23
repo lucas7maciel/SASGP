@@ -11,7 +11,7 @@ export function Accordion(props: AccordionProps) {
   return (
     <div
       className={`
-      bg-primary rounded-xl text-tertiary 
+      bg-primary rounded-xl text-tertiary select-none
       text-start px-4 py-3 w-full cursor-pointer
     `}
       onClick={() => setOpen((open) => !open)}

@@ -32,9 +32,9 @@ export function FAQ() {
         />
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-18 mx-auto mt-8 max-w-[50rem]">
+      <div className="flex flex-wrap items-center justify-between gap-x-18 gap-y-4 mx-auto mt-8 max-w-[50rem]">
         <div className="flex-1">
-          <p className="font-bold text-2xl">Alguma outra dúvida?</p>
+          <p className="font-bold text-2xl mb-0.5 md:mb-auto">Alguma outra dúvida?</p>
           <p>
             Nos envie uma mensagem personalizada, ficaremos felizes em te
             responder!

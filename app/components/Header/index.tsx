@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
 import { MenuIcon } from "../Icons/Menu";
 import { useEffect, useRef, useState } from "react";
+import { Section } from "./Section";
+import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 
 export function Header() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -55,8 +57,8 @@ export function Header() {
       </div>
       <div className="flex-center">
         <Link
-          className="font-semibold bg-primary text-tertiary text-xl rounded-full px-4 py-1.5 shadow-lg"
-          href={"/"}
+          className="font-semibold bg-primary text-tertiary text-xl rounded-full px-4 py-1.5 shadow"
+          href="https://sasgp.com.br/login-2/"
         >
           Entrar
         </Link>
@@ -74,14 +76,8 @@ export function Header() {
 
         <p className="font-bold text-lg">SASGP</p>
 
-        <Link href="/">
-          <Image
-            className="w-8 h-8"
-            src="/Logo.svg"
-            alt="SASGP"
-            width={500}
-            height={500}
-          />
+        <Link href="https://sasgp.com.br/login-2/" className="text-primary transition-all hover:opacity-90 cursor-pointer">
+          <AccountCircleRoundedIcon fontSize="large" />
         </Link>
       </header>
 
@@ -97,18 +93,26 @@ export function Header() {
           }
         }}
       >
-        <div className="max-w-[30rem] h-full bg-gray-100 pt-20">
-          {sections.map(({ title, url }) => (
-            <Link
-              className={`transition-all text-lg opacity-60 hover:opacity-90 ${
-                isSelected(url) && "font-bold"
-              }`}
-              key={title}
-              href={url}
-            >
-              {title}
-            </Link>
-          ))}
+        <div className="flex flex-col items-stretch justify-between gap-12 max-w-[30rem] h-full bg-tertiary px-5 pt-20 pb-4 shadow-2xl">
+          <div
+            className={`flex-1 flex-center flex-col gap-2 transition-all  ${
+              !open ? "opacity-0" : "opacity-100 duration-[800ms] delay-[400ms]"
+            }`}
+          >
+            {sections.map(({ title, url }) => (
+              <Section
+                key={title}
+                title={title}
+                url={url}
+                isSelected={isSelected(url)}
+              />
+            ))}
+          </div>
+          <div className="flex flex-col items-center gap-3">
+            <p className="font-semibold text-center">
+              © Todos os direitos reservados.
+            </p>
+          </div>
         </div>
       </div>
     </>

@@ -5,7 +5,7 @@ export function Tender() {
     <div className="p-20">
     <div className="bg-primary px-14 py-8 font-bold text-center text-tertiary rounded-3xl shadow-lg mx-auto max-w-[40rem]">
       <p className="text-3xl">Transforme seu Projeto!</p>
-      <p className="mx-auto mt-1 mb-4 w-[45ch]">
+      <p className="mx-auto mt-1 mb-4 max-w-[45ch]">
         Soluções digitais mais produtivas, eficientes e escaláveis para uma
         Gestão de excelência no seu Projeto!
       </p>

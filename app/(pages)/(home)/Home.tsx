@@ -17,10 +17,10 @@ export function HomeSection() {
         className={`absolute z-[-1] bottom-0 w-full h-[47.5%] ${styles["bottom-gradient"]}`}
       ></div>
       <DecorativeEllipse
-        classes={`absolute z-[-1] top-0 left-[-7.5rem] h-full w-auto ${styles["oval-gradient"]}`}
+        classes={`hidden md:block absolute z-[-1] top-0 left-[-7.5rem] h-full w-auto ${styles["oval-gradient"]}`}
       />
       <DecorativeEllipse
-        classes={`absolute z-[-1] top-0 right-[-7.5rem] h-full w-auto scale-x-[-1] ${styles["oval-gradient"]}`}
+        classes={`hidden md:block absolute z-[-1] top-0 right-[-7.5rem] h-full w-auto scale-x-[-1] ${styles["oval-gradient"]}`}
       />
 
       <h1 className={`font-bold text-6xl ${styles.title}`}>

@@ -3,9 +3,13 @@
 import { Button } from "@/app/components/Button";
 import { TextField } from "@/app/components/TextField";
 
-export function Forms() {
+interface FormsProps {
+  extraClasses?: string;
+}
+
+export function Forms(props: FormsProps) {
   return (
-    <div className="flex-1 flex flex-col gap-4 py-2">
+    <div className={`flex-1 flex flex-col justify-between gap-4 ${props.extraClasses}`}>
       <TextField label="Nome" placeHolder="Digite seu nome" />
       <TextField label="Email" placeHolder="Digite seu email" />
       <TextField label="Telefone" placeHolder="Digite seu telefone" />

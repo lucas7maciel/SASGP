@@ -42,7 +42,7 @@ export function Footer() {
           </Link>
 
           <div className="flex gap-2.5 text-tertiary mt-4 md:mt-10">
-            <Link className="text-4xl" href="/">
+            <Link className="text-4xl" href="https://www.linkedin.com/company/sasgp-br/">
               <LinkedIn fontSize="inherit" />
             </Link>
             <Link className="text-4xl" href="/">

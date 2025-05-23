@@ -32,10 +32,10 @@ export default function Blog() {
       <div className="min-h-screen w-full">
         <Header />
 
-        <div className="mx-auto mt-10 text-center max-w-[60rem]">
+        <div className="mx-auto text-center max-w-[60rem] px-8 py-10">
           <h1 className="font-bold text-4xl">Confira nossas notícias</h1>
 
-          <div className="flex justify-between gap-4 mt-6">
+          <div className="flex justify-between gap-4 mt-6 overflow-x-auto snap-mandatory">
             {categories.map((category) => (
               <Chip
                 key={category}
@@ -46,7 +46,7 @@ export default function Blog() {
             ))}
           </div>
 
-          <div className="py-8 grid grid-cols-3 gap-x-10 gap-y-8">
+          <div className="py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-7">
             {news.map((news) => (
               <NewsCard key={news.id} {...news} />
             ))}

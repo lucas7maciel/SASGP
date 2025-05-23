@@ -4,9 +4,9 @@ export const categories: string[] = [
   "Software",
   "Moda",
   "Orçamento",
-  "Comida",
   "Esportes",
-  "Pesca"
+  "QA",
+  "Pesca",
 ];
 
 export const news: NewsCardProps[] = [
@@ -14,90 +14,90 @@ export const news: NewsCardProps[] = [
     id: 1,
     title: "SASGP anuncia filial",
     description:
-      "Não se preocupe com os pormenores, pois o cerne da questão reside numa miríade de fatores que, embora pareçam desconexos",
+      "Geralmente, ela é usada para se referir a um discurso vazio, enrolação ou conversa sem conteúdo relevante. Pode ser usada para descrever alguém que está falando muito sem dizer nada de concreto",
     categories: ["Jogos", "Empresa"],
     author: "Lucas Maciel",
     date: "Ontem",
-    coverUrl: "/pictures/team2.webp",
+    coverUrl: "/mocked_news/news1.webp",
   },
   {
     id: 2,
     title: "SASGP anuncia filial",
     description:
-      "Não se preocupe com os pormenores, pois o cerne da questão reside numa miríade de fatores que, embora pareçam desconexos",
+      "Geralmente, ela é usada para se referir a um discurso vazio, enrolação ou conversa sem conteúdo relevante. Pode ser usada para descrever alguém que está falando muito sem dizer nada de concreto",
     categories: ["Jogos", "Empresa"],
     author: "Lucas Maciel",
     date: "Ontem",
-    coverUrl: "/pictures/team2.webp",
+    coverUrl: "/mocked_news/news1.webp",
   },
   {
     id: 3,
     title: "SASGP anuncia filial",
     description:
-      "Não se preocupe com os pormenores, pois o cerne da questão reside numa miríade de fatores que, embora pareçam desconexos",
+      "Geralmente, ela é usada para se referir a um discurso vazio, enrolação ou conversa sem conteúdo relevante. Pode ser usada para descrever alguém que está falando muito sem dizer nada de concreto",
     categories: ["Jogos", "Empresa"],
     author: "Lucas Maciel",
     date: "Ontem",
-    coverUrl: "/pictures/team2.webp",
+    coverUrl: "/mocked_news/news1.webp",
   },
   {
     id: 4,
     title: "SASGP anuncia filial",
     description:
-      "Não se preocupe com os pormenores, pois o cerne da questão reside numa miríade de fatores que, embora pareçam desconexos",
+      "Geralmente, ela é usada para se referir a um discurso vazio, enrolação ou conversa sem conteúdo relevante. Pode ser usada para descrever alguém que está falando muito sem dizer nada de concreto",
     categories: ["Jogos", "Empresa"],
     author: "Lucas Maciel",
     date: "Ontem",
-    coverUrl: "/pictures/team2.webp",
+    coverUrl: "/mocked_news/news1.webp",
   },
   {
     id: 5,
     title: "SASGP anuncia filial",
     description:
-      "Não se preocupe com os pormenores, pois o cerne da questão reside numa miríade de fatores que, embora pareçam desconexos",
+      "Geralmente, ela é usada para se referir a um discurso vazio, enrolação ou conversa sem conteúdo relevante. Pode ser usada para descrever alguém que está falando muito sem dizer nada de concreto",
     categories: ["Jogos", "Empresa"],
     author: "Lucas Maciel",
     date: "Ontem",
-    coverUrl: "/pictures/team2.webp",
+    coverUrl: "/mocked_news/news1.webp",
   },
   {
     id: 6,
     title: "SASGP anuncia filial",
     description:
-      "Não se preocupe com os pormenores, pois o cerne da questão reside numa miríade de fatores que, embora pareçam desconexos",
+      "Geralmente, ela é usada para se referir a um discurso vazio, enrolação ou conversa sem conteúdo relevante. Pode ser usada para descrever alguém que está falando muito sem dizer nada de concreto",
     categories: ["Jogos", "Empresa"],
     author: "Lucas Maciel",
     date: "Ontem",
-    coverUrl: "/pictures/team2.webp",
+    coverUrl: "/mocked_news/news1.webp",
   },
   {
     id: 7,
     title: "SASGP anuncia filial",
     description:
-      "Não se preocupe com os pormenores, pois o cerne da questão reside numa miríade de fatores que, embora pareçam desconexos",
+      "Geralmente, ela é usada para se referir a um discurso vazio, enrolação ou conversa sem conteúdo relevante. Pode ser usada para descrever alguém que está falando muito sem dizer nada de concreto",
     categories: ["Jogos", "Empresa"],
     author: "Lucas Maciel",
     date: "Ontem",
-    coverUrl: "/pictures/team2.webp",
+    coverUrl: "/mocked_news/news1.webp",
   },
   {
     id: 8,
     title: "SASGP anuncia filial",
     description:
-      "Não se preocupe com os pormenores, pois o cerne da questão reside numa miríade de fatores que, embora pareçam desconexos",
+      "Geralmente, ela é usada para se referir a um discurso vazio, enrolação ou conversa sem conteúdo relevante. Pode ser usada para descrever alguém que está falando muito sem dizer nada de concreto",
     categories: ["Jogos", "Empresa"],
     author: "Lucas Maciel",
     date: "Ontem",
-    coverUrl: "/pictures/team2.webp",
+    coverUrl: "/mocked_news/news1.webp",
   },
   {
     id: 9,
     title: "SASGP anuncia filial",
     description:
-      "Não se preocupe com os pormenores, pois o cerne da questão reside numa miríade de fatores que, embora pareçam desconexos",
+      "Geralmente, ela é usada para se referir a um discurso vazio, enrolação ou conversa sem conteúdo relevante. Pode ser usada para descrever alguém que está falando muito sem dizer nada de concreto",
     categories: ["Jogos", "Empresa"],
     author: "Lucas Maciel",
     date: "Ontem",
-    coverUrl: "/pictures/team2.webp",
+    coverUrl: "/mocked_news/news1.webp",
   },
 ];
