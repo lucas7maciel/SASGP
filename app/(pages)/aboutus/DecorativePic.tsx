@@ -18,7 +18,7 @@ export function DecorativePic(props: DecorativePicProps) {
       : props.distance ?? `5px`;
 
   return (
-    <div className={`aspect-video relative ${props.extraClasses}`} style={{}}>
+    <div className={`aspect-video relative w-full ${props.extraClasses}`}>
       <div
         style={{
           position: "absolute",

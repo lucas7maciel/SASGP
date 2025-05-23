@@ -9,13 +9,13 @@ export const metadata: Metadata = {
 }
 
 export default function AboutUs() {
-  const sectionStyles: string = "flex-center gap-24";
+  const sectionStyles: string = "flex-center md:flex-row gap-x-16 lg:gap-x-24 gap-y-8 text-center";
   const titleStyles: string = "text-3xl font-bold mb-1.5";
   const paragraphStyles: string = "font-semibold text-justify";
 
   return (
-    <div className="flex flex-col gap-16 py-8 px-10 max-w-[75rem]">
-      <section className={sectionStyles}>
+    <div className="flex flex-col gap-x-16 gap-y-8 py-8 px-12 max-w-[75rem]">
+      <section className={`${sectionStyles} flex-col-reverse`}>
         <DecorativePic
           extraClasses={`flex-1`}
           src="/pictures/team1.webp"
@@ -23,7 +23,7 @@ export default function AboutUs() {
           alt="Equipe SASGP"
         />
 
-        <div className="flex-1 text-end">
+        <div className="flex-1 md:text-end">
           <p className={titleStyles}>Quem é a SASGP?</p>
           <p className={paragraphStyles}>
             A SASGP nasceu em 17 de agosto de 2021 com um propósito claro:
@@ -41,8 +41,8 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className={sectionStyles}>
-        <div className="flex-1 text-left text-secondary">
+      <section className={`${sectionStyles} flex-col`}>
+        <div className="flex-1 md:text-left md:text-secondary">
           <p className={titleStyles}>Nosso propósito</p>
           <p className={paragraphStyles}>
             O propósito final da empresa SASGP em Soluções é 

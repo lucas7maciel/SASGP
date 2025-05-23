@@ -1,6 +1,6 @@
 "use client";
 
-import { Add } from "@mui/icons-material";
+import { Add as AddIcon } from "@mui/icons-material";
 import { useState } from "react";
 
 export function Accordion(props: AccordionProps) {
@@ -9,12 +9,15 @@ export function Accordion(props: AccordionProps) {
   const animationDuration = 500; // Em milissegundos
 
   return (
-    <div className="bg-primary rounded-lg text-tertiary text-start px-4 py-3 max-w-[50rem]">
-      <div
-        className="flex items-center justify-start gap-2 cursor-pointer"
-        onClick={() => setOpen((open) => !open)}
-      >
-        <Add fontSize="small" />
+    <div
+      className={`
+      bg-primary rounded-xl text-tertiary 
+      text-start px-4 py-3 w-full cursor-pointer
+    `}
+      onClick={() => setOpen((open) => !open)}
+    >
+      <div className="flex items-center justify-start gap-2 p-1.5">
+        <AddIcon fontSize="small" />
         <p className="font-semibold text-xl text-tertiary">{props.title}</p>
       </div>
 
@@ -23,22 +26,26 @@ export function Accordion(props: AccordionProps) {
           open ? "max-h-[1000px]" : "max-h-0"
         }`}
       >
-        <hr />
+        <hr
+          className={`
+        transition-all delay-[${
+          animationDuration * 0.75
+        }ms] duration-[${animationDuration}] ${
+            open ? "opacity-100" : "opacity-0"
+          }`}
+        />
         <p
-          className={`transition-all delay-[${
+          className={`
+          mt-1.5 transition-all delay-[${
             animationDuration * 0.75
           }ms] duration-[${animationDuration}] ${
             open ? "opacity-100" : "opacity-0"
           }`}
         >
-          Em consonância com os preceitos normativos vigentes e em estrito
-          cumprimento às diretrizes estabelecidas pelos órgãos competentes,
-          torna-se imperioso salientar que a implementação das ações propostas
-          demanda uma reavaliação crítica dos paradigmas convencionalmente
-          adotados. Nesse sentido, cabe ressaltar que a complexidade inerente
-          aos fatores multidimensionais que norteiam o presente contexto exige
-          uma abordagem holística e sinérgica, pautada em critérios
-          técnico-científicos que visam à otimização dos processos em questão.{" "}
+          {props.content} Ou ainda, pode lembrar a música "Chiclete com Banana"
+          (de Gordurinha e Almira Castilho), que tem um verso famoso: "O tio Sam
+          querendo se meter no samba, gere lero lero..." (aqui, "gere lero lero"
+          pode ser uma forma de zombaria ou imitação de discurso vazio).
         </p>
       </div>
     </div>

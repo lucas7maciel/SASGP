@@ -4,6 +4,7 @@ import { Button } from "@/app/components/Button";
 import { TextField } from "@/app/components/TextField";
 import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import { useState } from "react";
+import { Card } from "./Card";
 
 type MessageType = "suggestion" | "application";
 
@@ -11,7 +12,7 @@ export function Forms() {
   const [type, setType] = useState<MessageType>("suggestion");
 
   return (
-    <div className="flex-1 flex flex-col gap-3 py-2">
+    <div className="flex-1 flex flex-col gap-3 justify-between">
       <TextField label="Nome" placeHolder="Digite seu nome" />
       <TextField label="Email" placeHolder="Digite seu email" />
       <TextField
@@ -57,6 +58,8 @@ export function Forms() {
           type === "suggestion" ? "Envie sua sugestão" : "Envie sua candidatura"
         }
       />
+
+      <Card extraClasses="md:hidden text-center mt-4" />
     </div>
   );
 }

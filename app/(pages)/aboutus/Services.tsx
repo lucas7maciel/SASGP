@@ -33,7 +33,7 @@ export function Services() {
         gerenciamento de projetos baseadas no PMBOK
       </p>
 
-      <div className="mt-10 flex items-stretch justify-between gap-10">
+      <div className="mt-10 flex flex-col md:flex-row items-stretch justify-between gap-6">
         {servicesData.map((service, index) => (
           <Card key={index} {...service} />
         ))}

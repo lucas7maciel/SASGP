@@ -12,8 +12,8 @@ export function Sections() {
   const [selected, setSelected] = useState<string>(sections[0]);
 
   return (
-    <div className="min-h-[80vh] bg-primary flex-center">
-      <div className="flex w-[80%] h-[65vh]">
+    <div className="flex-center min-h-[80vh] px-12 py-8 bg-primary">
+      <div className="flex items-stretch w-[80%] min-h-[60vh]">
         <div className="flex flex-col justify-center">
           {sections.map((section) => (
             <Section
@@ -24,7 +24,7 @@ export function Sections() {
             />
           ))}
         </div>
-        <div className="flex-1 flex-center text-center h-full bg-tertiary p-24 rounded-3xl">
+        <div className="flex-1 min-h-[60vh] flex-center text-center bg-tertiary p-24 rounded-3xl">
           <p className="font-bold text-2xl">{selected}</p>
         </div>
       </div>

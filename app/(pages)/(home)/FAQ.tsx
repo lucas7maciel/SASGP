@@ -1,5 +1,4 @@
 import { Accordion } from "@/app/components/Accordion";
-import { Button } from "@/app/components/Button";
 import { TextField } from "@/app/components/TextField";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +12,7 @@ export function FAQ() {
         clientes da SASGP
       </h2>
 
-      <div className="mt-6 py-2 flex items-center flex-col gap-3">
+      <div className="mt-6 py-2 flex items-center flex-col gap-3 mx-auto max-w-[50rem]">
         <Accordion
           title="O que é este site? Qual o propósito dele?"
           content="A"
