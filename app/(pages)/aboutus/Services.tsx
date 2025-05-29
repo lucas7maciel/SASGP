@@ -10,17 +10,17 @@ export function Services() {
   const servicesData: CardProps[] = [
     {
       title: "Escritório de Projetos",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      description: "Gestão ágil e estratégica da implantação",
       icon: faFolder,
     },
     {
       title: "Análise Comportamental",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      description: "Perfis mapeados, equipes alinhadas",
       icon: faBrain,
     },
     {
       title: "Fábrica de Software",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      description: "Tecnologia feita sob medida com a Kactux",
       icon: faMicrochip,
     },
   ];

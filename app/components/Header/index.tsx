@@ -4,18 +4,25 @@ import Link from "next/link";
 import Image from "next/image";
 import { sections } from "./Sections";
 import { usePathname } from "next/navigation";
-import { useMediaQuery } from "react-responsive";
 import { MenuIcon } from "../Icons/Menu";
 import { useEffect, useRef, useState } from "react";
 import { Section } from "./Section";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 
 export function Header() {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const [isMobile, setIsMobile] = useState<boolean>(false)
   const activator = useRef<SVGSVGElement | null>(null);
   const pathname = usePathname();
 
   const [open, setOpen] = useState<boolean>(isMobile);
+
+  useEffect(() => {
+    const checkIfMobile = () => setIsMobile(window.innerWidth <= 767);
+    checkIfMobile();
+
+    window.addEventListener("resize", checkIfMobile);
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, [])
 
   useEffect(() => {
     setOpen(false);
@@ -30,7 +37,7 @@ export function Header() {
   }
 
   return !isMobile ? (
-    <header className="flex gap-6 px-6 py-3">
+    <header className="flex gap-6 w-full max-w-[100rem] mx-auto px-6 py-3">
       <div className="relative h-14 w-22">
         <Link href="/">
           <Image

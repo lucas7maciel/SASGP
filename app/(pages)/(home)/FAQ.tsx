@@ -4,6 +4,43 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function FAQ() {
+  const questions: AccordionProps[] = [
+    {
+      title: "O que faz a SASGP?",
+      content: "a",
+    },
+    {
+      title: "Quais serviços a SASGP oferece além da gestão de projetos?",
+      content: "a",
+    },
+    {
+      title: "Como funciona o modelo de PMO oferecido pela SASGP?",
+      content: "a",
+    },
+    {
+      title: "A SASGP atende projetos fora de Alagoas?",
+      content: "a",
+    },
+    {
+      title:
+        "A empresa também desenvolve softwares ou apenas gerencia projetos de implantação?",
+      content: "a",
+    },
+    {
+      title:
+        "É possível contratar apenas a análise de perfil comportamental para equipes?",
+      content: "a",
+    },
+    {
+      title: "Como solicitar um orçamento para meu projeto?",
+      content: "a",
+    },
+    {
+      title: "A SASGP participa de licitações públicas?",
+      content: "a",
+    },
+  ];
+
   return (
     <div className="py-20 px-16 text-center">
       <h1 className="font-bold text-3xl">Perguntas Frequentes</h1>
@@ -13,28 +50,16 @@ export function FAQ() {
       </h2>
 
       <div className="mt-6 py-2 flex items-center flex-col gap-3 mx-auto max-w-[50rem]">
-        <Accordion
-          title="O que é este site? Qual o propósito dele?"
-          content="A"
-        />
-        <Accordion title="Como posso navegar pelo site?" content="A" />
-        <Accordion
-          title="Como posso entrar em contato com vocês? Quais são os canais de atendimento disponíveis?"
-          content="A"
-        />
-        <Accordion
-          title="Esqueci minha senha. Como posso recuperá-la?"
-          content="A"
-        />
-        <Accordion
-          title="Esqueci minha senha. Como posso recuperá-la?"
-          content="A"
-        />
+        {questions.map((question, index) => (
+          <Accordion key={index} {...question} />
+        ))}
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-x-18 gap-y-4 mx-auto mt-8 max-w-[50rem]">
         <div className="flex-1">
-          <p className="font-bold text-2xl mb-0.5 md:mb-auto">Alguma outra dúvida?</p>
+          <p className="font-bold text-2xl mb-0.5 md:mb-auto">
+            Alguma outra dúvida?
+          </p>
           <p>
             Nos envie uma mensagem personalizada, ficaremos felizes em te
             responder!

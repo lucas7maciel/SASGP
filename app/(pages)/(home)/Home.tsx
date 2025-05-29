@@ -28,7 +28,7 @@ export function HomeSection() {
       />
 
       <h1 className={`font-bold text-6xl ${styles.title}`}>
-        Construindo o futuro
+        Gestão que entrega valor
       </h1>
       <h2
         className={`font-semibold text-2xl w-[35ch] mt-2 mx-auto ${styles.subtitle}`}

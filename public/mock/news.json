@@ -1,0 +1,47 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "header": {
+        "title": "SASGP anuncia filial em Maceió",
+        "description": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores envolvidos",
+        "author": "Lucas Maciel",
+        "date": "12 Jun, 2024"
+      },
+      "content": [
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/mocked_news/news1.webp",
+          "alt": "Primeira imagem"
+        },
+        {
+          "type": "title",
+          "content": "É real! A nova sede da SASGP está localizada em Cruz das Almas"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores envolvidos paradigmas contemporâneos."
+        },
+        {
+          "type": "paragraph",
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores envolvidos, promovendo assim uma sinergia entre os múltiplos fatores envolvidos."
+        },
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team1.webp",
+          "alt": "Segunda imagem"
+        },
+        {
+          "type": "title",
+          "content": "Nova seção da matéria para ilustrar um conteúdo fictício!"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores envolvidos paradigmas contemporâneos."
+        }
+      ]
+    }
+  ]
+}

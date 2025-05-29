@@ -1,3 +1,5 @@
+"use client"
+
 import { RefObject } from "react";
 import styles from "./index.module.css";
 

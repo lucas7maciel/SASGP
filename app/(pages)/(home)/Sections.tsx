@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export function Sections() {
   const sections = [
@@ -40,24 +41,34 @@ const Section = (props: {
   return (
     <div
       className={`
-        relative cursor-pointer flex-center font-bold 
-        p-2 rounded-lg md:rounded-none md:rounded-l-lg transition-all overflow-visible
-        ${props.selected ? "bg-tertiary" : "text-tertiary hover:bg-primary-40"}`}
+        relative cursor-pointer flex-center font-bold z-30
+        p-2 rounded-lg transition-[background] overflow-visible duration-[8s]
+        ${
+          props.selected
+            ? "md:rounded-l-lg md:rounded-r-none bg-tertiary"
+            : "text-tertiary hover:bg-primary-40"
+        }`}
       onClick={() => props.onClick()}
     >
       {props.title}
 
       {/* Borda decorativa */}
-      {props.selected && (
-        <>
-          <div className="hidden md:block transition-all absolute top-[100%] right-0 bg-tertiary w-3 aspect-square overflow-hidden">
-            <div className={`absolute top-[-5px] right-[-5px] w-[200%] rounded-tr-full bg-primary aspect-square`}></div>
-          </div>
-          <div className="hidden md:block transition-all absolute bottom-[100%] right-0 bg-tertiary w-3 aspect-square overflow-hidden">
-            <div className="absolute bottom-[-5px] right-[-5px] w-[200%] rounded-br-full bg-primary aspect-square"></div>
-          </div>
-        </>
-      )}
+      <Image
+        className={`absolute top-full right-0 h-2 w-2 aspect-square opacity-0
+          ${props.selected && "opacity-100 transition-all"} duration-[8s]`}
+        src="/icons/negative_radius.svg"
+        alt="Negative radius"
+        width={50}
+        height={50}
+      />
+      <Image
+        className={`absolute bottom-full right-0 h-2 w-2 aspect-square rotate-x-180 opacity-0
+          ${props.selected && "opacity-100 transition-all"} duration-[8s]`}
+        src="/icons/negative_radius.svg"
+        alt="Negative radius"
+        width={50}
+        height={50}
+      />
     </div>
   );
 };
