@@ -5,17 +5,6 @@ export function Location() {
     <div className="mx-auto p-20 max-w-[100rem]">
       <div className="px-14 py-8 font-bold text-center rounded-3xl mx-auto max-w-[40rem]">
         <p className="text-3xl">Onde nos encontrar</p>
-        <p className="mx-auto mt-1 mb-2 max-w-[45ch]">Venha nos visitar!</p>
-        <p className="mx-auto mt-1 mb-1 max-w-[45ch]">
-          Estamos te esperando com o melhor atendimento. Confira nosso endereço
-          e conheça nosso espaço pessoalmente!
-        </p>
-        <p className="mx-auto mt-1 mb-1 max-w-[45ch]">
-          Horários de funcionamento:
-        </p>
-        <p className="mx-auto mt-1 mb-1 max-w-[45ch]">
-          Segunda a Sexta: 8h às 18h e Sábado: 8h às 14h
-        </p>
       </div>
       <div className="relative w-full h-[455px]">
         <div className="absolute bottom-0 left-0 w-[calc(100%-10px)] h-[445px] bg-primary"></div>
@@ -26,6 +15,17 @@ export function Location() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
+      </div>
+      <div className="px-14 py-8 font-bold text-center rounded-3xl mx-auto max-w-[40rem]">
+        <p className="mx-auto mt-1 mb-1 max-w-[45ch]">
+          Horários de funcionamento:
+        </p>
+        <p className="mx-auto mt-1 mb-1 max-w-[45ch]">
+          Segunda a Sexta: 8h às 18h
+        </p>
+        <p className="mx-auto mt-1 mb-1 max-w-[45ch]">
+          Centro de Inovações, Jaraguá (sala 216), Maceió, Alagoas
+        </p>
       </div>
     </div>
   );

@@ -31,7 +31,7 @@ export function Footer() {
                 Localizada em
               </p>
               <p className="font-bold text-tertiary">
-                Centro de Inovações, Jaraguá
+                Centro de Inovações, Jaraguá (sala 216)
               </p>
               <p className="font-bold text-tertiary">Maceió, Alagoas</p>
             </div>
