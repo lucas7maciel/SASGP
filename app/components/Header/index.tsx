@@ -84,7 +84,7 @@ export function Header() {
         {/* <p className="font-bold text-lg">SASGP</p> */}
         <Image 
           className="h-10 w-16"
-          src="LogoTitle.svg"
+          src="/LogoTitle.svg"
           alt="Logo"
           width={500}
           height={500}
