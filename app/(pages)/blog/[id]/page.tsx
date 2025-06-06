@@ -8,15 +8,17 @@ async function getNewsData(id: string): Promise<News | null> {
   try {
     const res = await fetch(`${process.env.BASE_URL}/mock/news.json`);
     const data: { news?: News[] } = await res.json();
-    return data.news?.find((notice: News) => notice.id.toString() === id) ?? null;
+    return (
+      data.news?.find((notice: News) => notice.id.toString() === id) ?? null
+    );
   } catch (e) {
     console.error(e);
     return null;
   }
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const paramsRes = await params;
+export async function generateMetadata(props: {params : Promise<{ id: string }>}) {
+  const paramsRes = await props.params;
   const news = await getNewsData(paramsRes.id);
 
   return {
@@ -29,8 +31,8 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
-export default async function NewsPage({ params }: { params: { id: string } }) {
-  const paramsRes = await params
+export default async function NewsPage(props: {params : Promise<{ id: string }>}) {
+  const paramsRes = await props.params;
   const news = await getNewsData(paramsRes.id);
 
   return (
