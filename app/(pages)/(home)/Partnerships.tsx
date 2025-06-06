@@ -3,7 +3,7 @@ import { Carousel } from "@/app/components/Carousel";
 export function PartnerShips() {
   const partners: string[] = [
     "/partnerships/coplan.webp",
-    "/partnerships/itefy.webp",
+    // "/partnerships/itefy.webp",
     "/partnerships/maceio.webp",
     "/partnerships/mascarenhaselins.webp",
     "/partnerships/salvador.webp",

@@ -14,8 +14,8 @@ export function FAQ() {
       title: "Quais serviços a SASGP oferece além da gestão de projetos?",
       content: `
         Além da gestão de projetos, a SASGP oferece serviços complementares que potencializam os resultados das implantações, como:
-        - Fábrica de software, por meio da nossa empresa parceira Kactux;
-        - Análise de perfil comportamental aplicada à formação e ao desempenho das equipes;
+        \n- Fábrica de software, por meio da nossa empresa parceira Kactux;
+        \n- Análise de perfil comportamental aplicada à formação e ao desempenho das equipes;
       `,
     },
     // {
