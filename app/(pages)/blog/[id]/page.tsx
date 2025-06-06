@@ -26,7 +26,14 @@ export async function generateMetadata(props: {params : Promise<{ id: string }>}
     description:
       news?.header?.description ?? "Venha conferir esta notícia da SASGP",
     openGraph: {
-      images: [news?.header?.coverUrl ?? `${process.env.BASE_URL}/Logo.png`],
+      images: [{
+          url: news?.header?.coverUrl ?? `${process.env.BASE_URL}/Logo.png`,
+          width: 1200,
+          height: 630,
+          alt: news?.header?.title ?? "Notícia - SASGP",
+          type: 'image/png',
+        }],
+      type: 'article',
     },
   };
 }
