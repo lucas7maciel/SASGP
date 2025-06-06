@@ -90,7 +90,7 @@ export function Header() {
           height={500}
         />
 
-        <Link href="https://sasgp.com.br/login-2/" className="text-primary transition-all hover:opacity-90 cursor-pointer">
+        <Link href="https://sasgp.com.br/login-2/" className="flex-[0_0_45px] flex items-center justify-end text-primary transition-all hover:opacity-90 cursor-pointer">
           <AccountCircleRoundedIcon fontSize="large" />
         </Link>
       </header>
