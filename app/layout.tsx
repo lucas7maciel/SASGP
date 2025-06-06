@@ -16,7 +16,18 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: "SASGP",
-  description: "Soluções ágeis para sua empresa",
+  description: "Soluções ágeis para a sua empresa!",
+  openGraph: {
+    images: [
+      {
+        url: `${process.env.BASE_URL}/Logo.png`,
+        width: 1200,
+        height: 630,
+        alt: "SASGP - Logo",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
