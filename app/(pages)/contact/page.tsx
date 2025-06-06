@@ -1,19 +1,21 @@
 "use client";
 
+import { useEffect } from "react";
 import { Card } from "./Card";
 import { Forms } from "./Forms";
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = "SASGP - Contato";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Entre em contato conosco! Seja pelo site ou por nossas redes sociais.");
+    }
+  }, [])
+
   return (
     <>
-      <head>
-        <title>SASGP - Contato</title>
-        <meta
-          name="description"
-          content="Entre em contato conosco! Seja pelo site ou por nossas redes sociais."
-        />
-      </head>
-
       <div className="px-8 py-10 flex flex-col md:flex-row items-stretch gap-x-14 gap-y-6 max-w-[70rem]">
         <div className="flex-1 flex flex-col items-start justify-between">
           <div>

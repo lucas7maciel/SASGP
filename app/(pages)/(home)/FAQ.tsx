@@ -42,7 +42,7 @@ export function FAQ() {
   ];
 
   return (
-    <div className="py-20 px-16 text-center">
+    <div className="px-8 py-16 md:p-20 text-center">
       <h1 className="font-bold text-3xl">Perguntas Frequentes</h1>
       <h2 className="font-semibold text-lg max-w-[40ch] mx-auto mt-1">
         Aqui você vai encontrar respostas para dúvidas comuns entre potenciais
@@ -55,7 +55,7 @@ export function FAQ() {
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-x-18 gap-y-4 mx-auto mt-8 max-w-[50rem]">
+      <div className="flex flex-wrap flex-col sm:flex-row items-center justify-between gap-x-18 gap-y-4 mx-auto mt-8 max-w-[50rem]">
         <div className="flex-1">
           <p className="font-bold text-2xl mb-0.5 md:mb-auto">
             Alguma outra dúvida?
@@ -72,7 +72,7 @@ export function FAQ() {
           />
         </div>
 
-        <div className="flex-1 flex flex-col items-center gap-3 text-start">
+        <div className="flex-1 flex flex-col items-center gap-3 text-start w-full md:w-auto">
           <TextField
             extraClasses="w-full"
             label="Email"

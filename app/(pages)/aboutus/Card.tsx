@@ -11,7 +11,7 @@ export function Card(props: CardProps) {
       `}
     >
       <p className="font-bold text-2xl">{props.title}</p>
-      <FontAwesomeIcon className="aspect-square w-34 h-34" icon={props.icon} />
+      <FontAwesomeIcon className="aspect-square !w-34 !h-34" icon={props.icon} />
       <p className="font-bold text-lg mx-auto w-3/4 md:w-full">{props.description}</p>
     </div>
   );

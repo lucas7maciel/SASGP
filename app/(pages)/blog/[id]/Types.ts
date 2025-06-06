@@ -6,6 +6,7 @@ interface News {
     | ({ type: "paragraph" } & Paragraph)
     | ({ type: "media" } & Media)
   >;
+  tags: string[];
 }
 
 interface Header {
@@ -13,6 +14,7 @@ interface Header {
   description: string;
   author: string;
   date: string;
+  coverUrl?: string;
 }
 
 interface Media {

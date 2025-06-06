@@ -4,7 +4,159 @@
       "id": 1,
       "header": {
         "title": "SASGP anuncia filial em Maceió",
-        "description": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores envolvidos",
+        "description": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores",
+        "coverUrl": "/mocked_news/news1.jpg",
+        "author": "Lucas Maciel",
+        "date": "12 Jun, 2024"
+      },
+      "content": [
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team10.JPG",
+          "alt": "Primeira imagem"
+        },
+        {
+          "type": "title",
+          "content": "É real! A nova sede da SASGP está localizada em Cruz das Almas"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        },
+        {
+          "type": "paragraph",
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores, promovendo assim uma sinergia entre os múltiplos fatores."
+        },
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team1.webp",
+          "alt": "Segunda imagem"
+        },
+        {
+          "type": "title",
+          "content": "Nova seção da matéria para ilustrar um conteúdo fictício!"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        }
+      ],
+      "tags": ["Jogos", "Empresa", "Comida"]
+    },
+    {
+      "id": 2,
+      "header": {
+        "title": "Notícia diferente",
+        "description": "Essa é uma descrição diferente para mostrar que os dados que foram mockados no servidor estão sendo puxados pelo frontend de uma forma totalmente integrada utilizando ReactJS. Provavelmente será usado Django no futuro",
+        "author": "Lucas Maciel",
+        "date": "12 Jun, 2024"
+      },
+      "content": [
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/mocked_news/header.jpg",
+          "alt": "Primeira imagem"
+        },
+        {
+          "type": "title",
+          "content": "É real! A nova sede da SASGP está localizada em Cruz das Almas"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        },
+        {
+          "type": "title",
+          "content": "Uau! Um título novo!"
+        },
+        {
+          "type": "paragraph",
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores, promovendo assim uma sinergia entre os múltiplos fatores."
+        },
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team3.JPG",
+          "alt": "Segunda imagem"
+        },
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team5.JPG",
+          "alt": "Segunda imagem"
+        },
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team4.JPG",
+          "alt": "Segunda imagem"
+        }, 
+        {
+          "type": "title",
+          "content": "Acabou a matéria"
+        }
+      ],
+      "tags": ["Jogos", "Empresa", "Comida"]
+    },
+    {
+      "id": 3,
+      "header": {
+        "title": "Segunda notícia diferente",
+        "description": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores",
+        "coverUrl": "/mocked_news/news3.jpg",
+        "author": "Lucas Maciel",
+        "date": "12 Jun, 2024"
+      },
+      "content": [
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team6.JPG",
+          "alt": "Primeira imagem"
+        },
+        {
+          "type": "title",
+          "content": "Título da terceira"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        },
+        {
+          "type": "paragraph",
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores, promovendo assim uma sinergia entre os múltiplos fatores."
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        },
+        {
+          "type": "paragraph",
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores, promovendo assim uma sinergia entre os múltiplos fatores."
+        },
+        {
+          "type": "title",
+          "content": "Segundo título da terceira"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        },
+        {
+          "type": "paragraph",
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores, promovendo assim uma sinergia entre os múltiplos fatores."
+        }
+      ],
+      "tags": ["Jogos", "Empresa", "Comida"]
+    },
+    {
+      "id": 4,
+      "header": {
+        "title": "SASGP anuncia filial em Maceió",
+        "description": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores",
         "author": "Lucas Maciel",
         "date": "12 Jun, 2024"
       },
@@ -21,11 +173,11 @@
         },
         {
           "type": "paragraph",
-          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores envolvidos paradigmas contemporâneos."
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
         },
         {
           "type": "paragraph",
-          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores envolvidos, promovendo assim uma sinergia entre os múltiplos fatores envolvidos."
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores, promovendo assim uma sinergia entre os múltiplos fatores."
         },
         {
           "type": "media",
@@ -39,9 +191,230 @@
         },
         {
           "type": "paragraph",
-          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores envolvidos paradigmas contemporâneos."
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
         }
-      ]
+      ],
+      "tags": ["Jogos", "Empresa", "Comida"]
+    },
+    {
+      "id": 5,
+      "header": {
+        "title": "SASGP anuncia filial em Maceió",
+        "description": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores",
+        "author": "Lucas Maciel",
+        "date": "12 Jun, 2024"
+      },
+      "content": [
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/mocked_news/news1.webp",
+          "alt": "Primeira imagem"
+        },
+        {
+          "type": "title",
+          "content": "É real! A nova sede da SASGP está localizada em Cruz das Almas"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        },
+        {
+          "type": "paragraph",
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores, promovendo assim uma sinergia entre os múltiplos fatores."
+        },
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team1.webp",
+          "alt": "Segunda imagem"
+        },
+        {
+          "type": "title",
+          "content": "Nova seção da matéria para ilustrar um conteúdo fictício!"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        }
+      ],
+      "tags": ["Jogos", "Empresa", "Comida"]
+    },
+    {
+      "id": 6,
+      "header": {
+        "title": "SASGP anuncia filial em Maceió",
+        "description": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores",
+        "author": "Lucas Maciel",
+        "date": "12 Jun, 2024"
+      },
+      "content": [
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/mocked_news/news1.webp",
+          "alt": "Primeira imagem"
+        },
+        {
+          "type": "title",
+          "content": "É real! A nova sede da SASGP está localizada em Cruz das Almas"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        },
+        {
+          "type": "paragraph",
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores, promovendo assim uma sinergia entre os múltiplos fatores."
+        },
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team1.webp",
+          "alt": "Segunda imagem"
+        },
+        {
+          "type": "title",
+          "content": "Nova seção da matéria para ilustrar um conteúdo fictício!"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        }
+      ],
+      "tags": ["Jogos", "Empresa", "Comida"]
+    },
+    {
+      "id": 7,
+      "header": {
+        "title": "SASGP anuncia filial em Maceió",
+        "description": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores",
+        "author": "Lucas Maciel",
+        "date": "12 Jun, 2024"
+      },
+      "content": [
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/mocked_news/news1.webp",
+          "alt": "Primeira imagem"
+        },
+        {
+          "type": "title",
+          "content": "É real! A nova sede da SASGP está localizada em Cruz das Almas"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        },
+        {
+          "type": "paragraph",
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores, promovendo assim uma sinergia entre os múltiplos fatores."
+        },
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team1.webp",
+          "alt": "Segunda imagem"
+        },
+        {
+          "type": "title",
+          "content": "Nova seção da matéria para ilustrar um conteúdo fictício!"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        }
+      ],
+      "tags": ["Jogos", "Empresa", "Comida"]
+    },
+    {
+      "id": 8,
+      "header": {
+        "title": "SASGP anuncia filial em Maceió",
+        "description": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores",
+        "author": "Lucas Maciel",
+        "date": "12 Jun, 2024"
+      },
+      "content": [
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/mocked_news/news1.webp",
+          "alt": "Primeira imagem"
+        },
+        {
+          "type": "title",
+          "content": "É real! A nova sede da SASGP está localizada em Cruz das Almas"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        },
+        {
+          "type": "paragraph",
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores, promovendo assim uma sinergia entre os múltiplos fatores."
+        },
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team1.webp",
+          "alt": "Segunda imagem"
+        },
+        {
+          "type": "title",
+          "content": "Nova seção da matéria para ilustrar um conteúdo fictício!"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        }
+      ],
+      "tags": ["Jogos", "Empresa", "Comida"]
+    },
+    {
+      "id": 9,
+      "header": {
+        "title": "SASGP anuncia filial em Maceió",
+        "description": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores",
+        "author": "Lucas Maciel",
+        "date": "12 Jun, 2024"
+      },
+      "content": [
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/mocked_news/news1.webp",
+          "alt": "Primeira imagem"
+        },
+        {
+          "type": "title",
+          "content": "É real! A nova sede da SASGP está localizada em Cruz das Almas"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        },
+        {
+          "type": "paragraph",
+          "content": "Faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores, promovendo assim uma sinergia entre os múltiplos fatores."
+        },
+        {
+          "type": "media",
+          "format": "image",
+          "url": "/pictures/team1.webp",
+          "alt": "Segunda imagem"
+        },
+        {
+          "type": "title",
+          "content": "Nova seção da matéria para ilustrar um conteúdo fictício!"
+        },
+        {
+          "type": "paragraph",
+          "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        }
+      ],
+      "tags": ["Jogos", "Empresa", "Comida"]
     }
   ]
 }

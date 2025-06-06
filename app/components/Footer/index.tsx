@@ -64,18 +64,24 @@ export function Footer() {
             <div className="flex gap-2.5 text-tertiary mt-4 md:mt-10">
               <Link
                 className="text-4xl"
-                href="https://www.linkedin.com/company/sasgp-br/"
+                href="https://www.linkedin.com/company/sasgp-br/posts/?feedView=all"
+                target="__blank"
               >
                 <LinkedIn fontSize="inherit" />
               </Link>
-              <Link className="text-4xl" href="/">
+              <Link
+                className="text-4xl"
+                href="https://api.whatsapp.com/send/?phone=11981909659&text&type=phone_number&app_absent=0"
+                target="__blank"
+              >
                 <WhatsApp fontSize="inherit" />
               </Link>
-              <Link className="text-4xl" href="/">
+              <Link
+                className="text-4xl"
+                href="https://www.instagram.com/sasgp.br/"
+                target="__blank"
+              >
                 <Instagram fontSize="inherit" />
-              </Link>
-              <Link className="text-4xl" href="/">
-                <X fontSize="inherit" />
               </Link>
             </div>
           </div>

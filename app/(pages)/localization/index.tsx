@@ -2,8 +2,8 @@
 
 export function Location() {
   return (
-    <div className="mx-auto p-20 max-w-[100rem]">
-      <div className="px-14 py-8 font-bold text-center rounded-3xl mx-auto max-w-[40rem]">
+    <div className="mx-auto px-8 py-16 md:p-20 max-w-[100rem]">
+      <div className="md:px-14 py-8 font-bold text-center rounded-3xl mx-auto max-w-[40rem]">
         <p className="text-3xl">Onde nos encontrar</p>
         <p className="mx-auto mt-1 mb-2 max-w-[45ch]">Venha nos visitar!</p>
         <p className="mx-auto mt-1 mb-1 max-w-[45ch]">

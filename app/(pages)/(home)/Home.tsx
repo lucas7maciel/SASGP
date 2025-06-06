@@ -6,7 +6,7 @@ import Image from "next/image";
 export function HomeSection() {
   const secondaryCardStyles = `
     flex-[0_0_24rem] flex-center flex-col gap-4 
-    h-[20rem] w-[28rem] p-6 text-secondary text-center
+    !h-[20rem] !w-[28rem] p-6 text-secondary text-center
     bg-tertiary rounded-2xl shadow-[0_0_15px_0.5px_rgba(0,0,0,0.3)]
   `;
 

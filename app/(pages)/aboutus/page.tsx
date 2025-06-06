@@ -1,24 +1,36 @@
+"use client"
+
+import { useEffect } from "react";
 import { DecorativePic } from "./DecorativePic";
 import { Services } from "./Services";
 
-import type { Metadata } from 'next'
- 
-export const metadata: Metadata = {
-  title: 'SASGP - Sobre Nós',
-  description: 'Conheça um pouco mais a respeito da nossa empresa!',
-}
-
 export default function AboutUs() {
-  const sectionStyles: string = "flex-center md:flex-row gap-x-16 lg:gap-x-24 gap-y-8 text-center";
+  const sectionStyles: string =
+    "flex-center md:flex-row gap-x-16 lg:gap-x-24 gap-y-8 text-center";
   const titleStyles: string = "text-3xl font-bold mb-1.5";
   const paragraphStyles: string = "font-semibold text-justify";
+
+  useEffect(() => {
+    document.title = "SASGP - Sobre Nós";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Conheça um pouco mais a respeito da nossa empresa!");
+    }
+  }, []);
 
   return (
     <div className="flex flex-col gap-x-16 gap-y-8 py-8 px-12 max-w-[75rem]">
       <section className={`${sectionStyles} flex-col-reverse`}>
         <DecorativePic
           extraClasses={`flex-1`}
-          src="/pictures/team1.webp"
+          pics={[
+            "/pictures/team4.JPG",
+            "/pictures/team6.JPG",
+            "/pictures/team8.JPG",
+            "/pictures/team10.JPG",
+            "/pictures/team12.JPG",
+            "/pictures/team14.JPG",
+          ]}
           distance={8}
           alt="Equipe SASGP"
         />
@@ -62,7 +74,15 @@ export default function AboutUs() {
 
         <DecorativePic
           extraClasses={`flex-1`}
-          src="/pictures/team2.webp"
+          pics={[
+            "/pictures/team5.JPG",
+            "/pictures/team3.JPG",
+            "/pictures/team7.JPG",
+            "/pictures/team9.JPG",
+            "/pictures/team11.JPG",
+            "/pictures/team13.JPG",
+            "/pictures/team15.JPG",
+          ]}
           alt="Equipe SASGP"
           distance={8}
           side="left"

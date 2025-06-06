@@ -81,7 +81,14 @@ export function Header() {
           height={30}
         />
 
-        <p className="font-bold text-lg">SASGP</p>
+        {/* <p className="font-bold text-lg">SASGP</p> */}
+        <Image 
+          className="h-10 w-16"
+          src="LogoTitle.svg"
+          alt="Logo"
+          width={500}
+          height={500}
+        />
 
         <Link href="https://sasgp.com.br/login-2/" className="text-primary transition-all hover:opacity-90 cursor-pointer">
           <AccountCircleRoundedIcon fontSize="large" />

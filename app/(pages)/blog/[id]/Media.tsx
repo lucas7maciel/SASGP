@@ -5,11 +5,11 @@ export function Media(props: Media) {
     <>
       {props.format === "image" && (
         <Image
-          className="rounded-xl"
+          className="mt-8 object-cover w-full h-[375px] rounded-xl"
           src={props.url}
           alt={props.alt}
-          width={500}
-          height={500}
+          width={1500}
+          height={1500}
         />
       )}
     </>

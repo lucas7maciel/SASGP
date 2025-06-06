@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Chip } from "./Chip";
 import { Header } from "./Header";
 import { categories, news } from "./Mock";
 import { NewsCard } from "./NewsCard";
+import { Skeleton } from "@mui/material";
 
 export default function Blog() {
+  const [news, setNews] = useState<undefined | News[]>(undefined);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
   const toggleCategories = (category: string) => {
@@ -19,16 +21,25 @@ export default function Blog() {
     });
   };
 
+  useEffect(() => {
+    document.title = "SASGP - Blog";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Fique por dentro das novidades a respeito de nossa empresa e de nossos produtos!");
+    }
+
+    fetch(`/mock/news.json`)
+      .then((res) => res.json())
+      .then((res: { news: News[] }) => {
+        setTimeout(() => {
+          setNews(res.news as News[]);
+        }, 1000);
+      });
+  }, []);
+
   return (
     <>
-      <head>
-        <title>SASGP - Blog</title>
-        <meta
-          name="description"
-          content="Fique por dentro das novidades a respeito de nossa empresa e de nossos produtos!"
-        />
-      </head>
-
       <div className="min-h-screen w-full">
         <Header />
 
@@ -46,8 +57,12 @@ export default function Blog() {
             ))}
           </div>
 
-          <div className="py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-7">
-            {news.map((news) => (
+          <div className={`py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 ${news ? 'gap-y-7' : 'gap-y-2'}`}>
+            {!news && [0, 1, 2].map((index) => (
+              <Skeleton key={index} className="!rounded-2xl !h-[300px]" height={300} />
+            ))}
+
+            {news?.map((news) => (
               <NewsCard key={news.id} {...news} />
             ))}
           </div>

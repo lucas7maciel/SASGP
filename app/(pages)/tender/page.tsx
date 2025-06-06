@@ -12,17 +12,17 @@ export const metadata: Metadata = {
 
 export default function Tender() {
   return (
-    <div className="max-w-[65rem] p-16 md:pb-26">
+    <div className="max-w-[65rem] p-10 md:p-16 md:pb-26">
       <div className="text-center mb-6 md:mb-9">
         <div className="md:hidden flex items-center justify-center gap-2 mb-1 text-center">
-          <FontAwesomeIcon className="text-secondary h-4 w-4" icon={faMedal} />
+          <FontAwesomeIcon className="text-secondary !h-4 !w-4" icon={faMedal} />
           <p className="font-bold text-secondary text-xl select-none">
             Excelência na gestão
           </p>
         </div>
 
         <h1 className="font-bold text-4xl">Faça seu orçamento!</h1>
-        <h2 className="font-semibold text-lg w-3/4 md:w-[60%] mx-auto mt-1">
+        <h2 className="font-semibold text-lg w-[85%] md:w-[60%] mx-auto mt-1">
           Solicite seu orçamento e descubra como transformar seus projetos com
           agilidade e simplicidade
         </h2>
@@ -34,7 +34,7 @@ export default function Tender() {
         <div className="flex-1 flex items-center justify-center flex-col text-center">
           <div className="hidden md:flex items-center justify-center gap-3.5 text-center">
             <FontAwesomeIcon
-              className="text-secondary h-7 w-7"
+              className="text-secondary !h-7 !w-7"
               icon={faMedal}
             />
             <p className="font-bold text-secondary text-3xl select-none">

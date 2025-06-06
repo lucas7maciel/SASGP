@@ -8,8 +8,8 @@ export function Header() {
     <div className="px-12 py-10 bg-primary flex items-center justify-center">
       <div className="flex flex-col md:flex-row bg-tertiary rounded-3xl shadow-xl max-w-[50rem] overflow-hidden">
         <Image
-          className="object-cover rounded-b-3xl md:rounded-r-3xl shadow-xl md:shadow-2xl w-full flex-[0_0_16rem] md:flex-[0_0_25rem] h-[16rem] md:h-[17rem]"
-          src="/pictures/team1.webp"
+          className="object-cover rounded-b-3xl md:rounded-r-3xl shadow-xl md:shadow-2xl flex-[0_0_16rem] md:flex-[0_0_400px] h-[16rem] md:h-[17rem] w-[16rem] md:w-[400px]"
+          src="/mocked_news/header.jpg"
           alt="Principal notícia"
           width={500}
           height={500}
