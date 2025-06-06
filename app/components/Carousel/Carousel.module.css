@@ -1,10 +1,6 @@
 
-:root {
-    --carousel-duration: 40s;
-}
-
 .carousel {
-    animation: back var(--carousel-duration) infinite linear;
+    animation: back 40s infinite linear;
 }
 
 @keyframes back {
