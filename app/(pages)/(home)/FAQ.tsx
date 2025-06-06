@@ -7,38 +7,47 @@ export function FAQ() {
   const questions: AccordionProps[] = [
     {
       title: "O que faz a SASGP?",
-      content: "a",
+      content:
+        "A SASGP é especializada na gestão de projetos de Implantação de Software, com foco no setor público. Atuamos como um Escritório de Projetos (PMO), oferecendo planejamento, controle, acompanhamento e suporte estratégico para garantir que os projetos sejam executados com eficiência, simplicidade e impacto. Nosso diferencial está na abordagem centrada nas pessoas, no uso de metodologias ágeis e na entrega de soluções com o nosso conhecido efeito UAU.",
     },
     {
       title: "Quais serviços a SASGP oferece além da gestão de projetos?",
-      content: "a",
+      content: `
+        Além da gestão de projetos, a SASGP oferece serviços complementares que potencializam os resultados das implantações, como:
+        - Fábrica de software, por meio da nossa empresa parceira Kactux;
+        - Análise de perfil comportamental aplicada à formação e ao desempenho das equipes;
+      `,
     },
-    {
-      title: "Como funciona o modelo de PMO oferecido pela SASGP?",
-      content: "a",
-    },
+    // {
+    //   title: "Como funciona o modelo de PMO oferecido pela SASGP?",
+    //   content: "a",
+    // },
     {
       title: "A SASGP atende projetos fora de Alagoas?",
-      content: "a",
+      content:
+        "Sim! Embora a sede da SASGP esteja em Alagoas, atendemos projetos em todo o Brasil. Nosso modelo de trabalho remoto e a expertise em gestão digital nos permitem apoiar implantações de software em diferentes regiões com a mesma qualidade, proximidade e compromisso",
     },
     {
       title:
         "A empresa também desenvolve softwares ou apenas gerencia projetos de implantação?",
-      content: "a",
+      content:
+        "A SASGP se especializa na gestão de projetos, mas oferece desenvolvimento de software por meio da Kactux, nossa parceira estratégica. Com isso, conseguimos unir o melhor dos dois mundos: gestão qualificada e soluções tecnológicas sob medida, tudo com uma visão integrada e voltada para o sucesso do cliente.",
     },
     {
       title:
         "É possível contratar apenas a análise de perfil comportamental para equipes?",
-      content: "a",
+      content:
+        "Sim, é possível. A análise de perfil comportamental pode ser contratada de forma avulsa, como ferramenta de apoio para gestão de equipes, processos seletivos ou desenvolvimento de lideranças. Utilizamos metodologias validadas para identificar competências, alinhar perfis e melhorar a performance do time.",
     },
     {
       title: "Como solicitar um orçamento para meu projeto?",
-      content: "a",
+      content:
+        "Você pode solicitar um orçamento de forma rápida e prática acessando nossa página de contato (inserir link para página de orçamento) ou enviando um e-mail para comercial@sasgp.com.br. Se preferir, também estamos disponíveis no WhatsApp. Basta informar os detalhes do seu projeto que nossa equipe entrará em contato com uma proposta personalizada.",
     },
-    {
-      title: "A SASGP participa de licitações públicas?",
-      content: "a",
-    },
+    // {
+    //   title: "A SASGP participa de licitações públicas?",
+    //   content: "a",
+    // },
   ];
 
   return (

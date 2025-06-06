@@ -42,10 +42,7 @@ export function Accordion(props: AccordionProps) {
             open ? "opacity-100" : "opacity-0"
           }`}
         >
-          {props.content} Ou ainda, pode lembrar a música "Chiclete com Banana"
-          (de Gordurinha e Almira Castilho), que tem um verso famoso: "O tio Sam
-          querendo se meter no samba, gere lero lero..." (aqui, "gere lero lero"
-          pode ser uma forma de zombaria ou imitação de discurso vazio).
+          {props.content}
         </p>
       </div>
     </div>
