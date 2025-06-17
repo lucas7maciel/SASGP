@@ -3,30 +3,39 @@
 import { useEffect, useState } from "react";
 import { Chip } from "./Chip";
 import { Header } from "./Header";
-import { categories, news } from "./Mock";
+import { categories as mockedCategories } from "./Mock";
 import { NewsCard } from "./NewsCard";
-import { Skeleton } from "@mui/material";
+import { Skeleton } from "@/app/components/Skeleton";
 
 export default function Blog() {
   const [news, setNews] = useState<undefined | News[]>(undefined);
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [categories, setCategories] = useState<
+    { value: string; selected: boolean }[] | undefined
+  >(undefined);
 
   const toggleCategories = (category: string) => {
-    setSelectedCategories((categories) => {
-      if (categories.includes(category)) {
-        return categories.filter((c) => c !== category);
-      }
+    setCategories((categories) => {
+      return (
+        categories?.map((c) => {
+          if (c.value === category) {
+            c.selected = !c.selected;
+          }
 
-      return [...categories, category];
+          return c;
+        }) ?? []
+      );
     });
   };
 
   useEffect(() => {
     document.title = "SASGP - Blog";
-    
+
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Fique por dentro das novidades a respeito de nossa empresa e de nossos produtos!");
+      metaDescription.setAttribute(
+        "content",
+        "Fique por dentro das novidades a respeito de nossa empresa e de nossos produtos!"
+      );
     }
 
     fetch(`/mock/news.json`)
@@ -34,6 +43,9 @@ export default function Blog() {
       .then((res: { news: News[] }) => {
         setTimeout(() => {
           setNews(res.news as News[]);
+          setCategories(
+            mockedCategories.map((value) => ({ value, selected: false }))
+          );
         }, 1000);
       });
   }, []);
@@ -47,20 +59,35 @@ export default function Blog() {
           <h1 className="font-bold text-4xl">Confira nossas notícias</h1>
 
           <div className="flex justify-between gap-4 mt-6 overflow-x-auto snap-mandatory">
-            {categories.map((category) => (
-              <Chip
-                key={category}
-                title={category}
-                selected={!!selectedCategories.some((c) => c === category)}
-                onClick={toggleCategories}
-              />
-            ))}
+            {categories &&
+              categories.map((category) => (
+                <Chip
+                  key={category.value}
+                  title={category.value}
+                  selected={category.selected}
+                  onClick={() => toggleCategories(category.value)}
+                />
+              ))}
+
+            {/* Loader */}
+            {!categories &&
+              [76, 104, 107, 76, 125, 104, 55, 78].map((w, index) => (
+                <Skeleton
+                  key={index}
+                  extraClasses="!rounded-full"
+                  width={`${w}px`}
+                  height="38px"
+                />
+              ))}
           </div>
 
-          <div className={`py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 ${news ? 'gap-y-7' : 'gap-y-2'}`}>
-            {!news && [0, 1, 2].map((index) => (
-              <Skeleton key={index} className="!rounded-2xl !h-[300px]" height={300} />
-            ))}
+          <div
+            className={`py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-7`}
+          >
+            {!news &&
+              [1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
+                <Skeleton key={index} width="280px" height="235px" />
+              ))}
 
             {news?.map((news) => (
               <NewsCard key={news.id} {...news} />

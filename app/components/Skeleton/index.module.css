@@ -1,0 +1,18 @@
+
+.skeleton_anim {
+    animation: skeleton infinite 1.75s;
+}
+
+@keyframes skeleton {
+    0% {
+        opacity: 100%;
+    }
+
+    75% {
+        opacity: 60%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}

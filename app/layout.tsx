@@ -41,7 +41,7 @@ export default function RootLayout({
         className={`${nunitoSans.className} ${nunito.className} antialiased min-h-screen flex flex-col`}
       >
         <Header />
-        <div className="flex-1 flex justify-center items-center">
+        <div className="flex-1 flex justify-center items-center mt-[80px]">
           {children}
         </div>
         <Footer />

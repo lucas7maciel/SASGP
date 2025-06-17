@@ -10,19 +10,27 @@ import { Section } from "./Section";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 
 export function Header() {
-  const [isMobile, setIsMobile] = useState<boolean>(false)
   const activator = useRef<SVGSVGElement | null>(null);
   const pathname = usePathname();
 
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [onTop, setOnTop] = useState<boolean>(true);
+  const [prevScrollY, setPrevScrollY] = useState<number | undefined>(undefined);
+  const [showHeader, setShowHeader] = useState<boolean>(true);
   const [open, setOpen] = useState<boolean>(isMobile);
 
   useEffect(() => {
-    const checkIfMobile = () => setIsMobile(window.innerWidth <= 767);
     checkIfMobile();
+    checkShowHeader();
 
     window.addEventListener("resize", checkIfMobile);
-    return () => window.removeEventListener("resize", checkIfMobile);
-  }, [])
+    window.addEventListener("scroll", checkShowHeader);
+
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+      window.removeEventListener("scroll", checkShowHeader);
+    };
+  }, []);
 
   useEffect(() => {
     setOpen(false);
@@ -36,8 +44,40 @@ export function Header() {
     return pathname.startsWith(url);
   }
 
+  function checkShowHeader() {
+    console.log("Checando show header", window);
+    if (!window) return false;
+
+    const currentScrollY = window.scrollY;
+
+    setOnTop(window.scrollY === 0);
+    setPrevScrollY((prev) => {
+      setShowHeader(prev === undefined || prev > currentScrollY);
+      console.log("Checando show header", prev, "-", currentScrollY);
+      return currentScrollY;
+    });
+  }
+
+  function checkIfMobile() {
+    if (window) setIsMobile(window.innerWidth <= 767);
+  }
+
   return !isMobile ? (
-    <header className="flex gap-6 w-full max-w-[100rem] mx-auto px-6 py-3">
+    <header
+      className={`
+        fixed left-1/2 top-0 translate-x-[-50%] z-[100] transition-all 
+        ${
+          showHeader &&
+          !onTop &&
+          "bg-tertiary shadow-lg hu:top-2 hu:shadow-xl hu:rounded-lg"
+        }
+        ${!showHeader && "top-[-70px]"}
+        flex gap-6 
+        w-full max-w-[100rem] 
+        px-6 py-3
+      `}
+    >
+      {/* Mostrar opções de trnsição pra lara */}
       <div className="relative h-14 w-22">
         <Link href="/">
           <Image
@@ -73,7 +113,16 @@ export function Header() {
     </header>
   ) : (
     <>
-      <header className="flex items-center justify-between bg-tertiary shadow px-4 py-4 z-50">
+      <header
+        className={`
+          fixed top-0 z-50
+          ${showHeader && !onTop && "shadow-lg"}
+          ${!showHeader && "top-[-70px]"}
+          flex items-center justify-between
+          w-full px-4 py-4
+          bg-tertiary shadow transition-all
+        `}
+      >
         <MenuIcon
           open={open}
           setOpen={() => setOpen((open) => !open)}
@@ -82,7 +131,7 @@ export function Header() {
         />
 
         {/* <p className="font-bold text-lg">SASGP</p> */}
-        <Image 
+        <Image
           className="h-10 w-16"
           src="/LogoTitle.svg"
           alt="Logo"
@@ -90,7 +139,10 @@ export function Header() {
           height={500}
         />
 
-        <Link href="https://sasgp.com.br/login-2/" className="flex-[0_0_45px] flex items-center justify-end text-primary transition-all hover:opacity-90 cursor-pointer">
+        <Link
+          href="https://sasgp.com.br/login-2/"
+          className="flex-[0_0_45px] flex items-center justify-end text-primary transition-all hover:opacity-90 cursor-pointer"
+        >
           <AccountCircleRoundedIcon fontSize="large" />
         </Link>
       </header>
