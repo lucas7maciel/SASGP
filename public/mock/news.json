@@ -199,10 +199,11 @@
     {
       "id": 5,
       "header": {
-        "title": "SASGP anuncia filial em Maceió",
-        "description": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores",
+        "title": "Notícia pipipi popopo",
+        "description": "Ah, o lero-lero... uma arte de tecer palavras sem pressa, como um rio que serpenteia pela planície. É um jeito de deixar a conversa fluir leve.",
         "author": "Lucas Maciel",
-        "date": "12 Jun, 2024"
+        "date": "12 Jun, 2024",
+        "coverUrl": "/mocked_news/header.jpg"
       },
       "content": [
         {

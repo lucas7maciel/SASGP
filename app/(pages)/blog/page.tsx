@@ -9,6 +9,7 @@ import { Skeleton } from "@/app/components/Skeleton";
 
 export default function Blog() {
   const [news, setNews] = useState<undefined | News[]>(undefined);
+  const [headerNotice, setHeaderNotice] = useState<undefined | News>(undefined)
   const [categories, setCategories] = useState<
     { value: string; selected: boolean }[] | undefined
   >(undefined);
@@ -42,18 +43,19 @@ export default function Blog() {
       .then((res) => res.json())
       .then((res: { news: News[] }) => {
         setTimeout(() => {
+          setHeaderNotice(res.news?.find(({id}) => id === 5) as News | undefined)
           setNews(res.news as News[]);
           setCategories(
             mockedCategories.map((value) => ({ value, selected: false }))
           );
-        }, 1000);
+        }, 1500);
       });
   }, []);
 
   return (
     <>
       <div className="min-h-screen w-full">
-        <Header />
+        <Header notice={headerNotice as News | undefined} />
 
         <div className="mx-auto text-center max-w-[60rem] px-8 py-10">
           <h1 className="font-bold text-4xl">Confira nossas notícias</h1>
@@ -86,7 +88,7 @@ export default function Blog() {
           >
             {!news &&
               [1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
-                <Skeleton key={index} width="280px" height="235px" />
+                <Skeleton key={index} width="100%" height="235px" />
               ))}
 
             {news?.map((news) => (

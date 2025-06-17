@@ -7,7 +7,6 @@ import Link from "next/link";
 
 async function getNewsData(id: string): Promise<News | null | undefined> {
   try {
-    // return undefined;
     const res = await fetch(`${process.env.BASE_URL}/mock/news.json`);
     const data: { news?: News[] } = await res.json();
     return (
@@ -55,13 +54,13 @@ export default async function NewsPage(props: {
       {news === null && (
         <div className="flex-center flex-col gap-2 text-center pb-12">
           <Image
-            className="w-[275px] h-[275px]"
+            className="w-[300px] md:w-[400px] h-[300px] md:h-[400px]"
             src="/illustrations/not-found-news.svg"
             alt="Notícia não encontrada"
             width={500}
             height={500}
           />
-          <p className="font-bold text-2xl w-3/4">
+          <p className="font-bold text-2xl md:text-3xl w-3/4">
             Ops... Parece que esta notícia não foi encontrada
           </p>
         </div>
@@ -70,16 +69,16 @@ export default async function NewsPage(props: {
       {news === undefined && (
         <div className="flex-center flex-col gap-1 text-center pb-12">
           <Image
-            className="w-[275px] h-[275px]"
+            className="w-[250px] md:w-[350px] h-[250px] md:h-[350px] mb-2"
             src="/illustrations/bad-request-news.svg"
             alt="Notícia não encontrada"
             width={500}
             height={500}
           />
-          <p className="font-bold text-2xl">
+          <p className="font-bold text-2xl md:text-3xl">
             Falha ao pesquisar por notícia
           </p>
-          <p className="font-semibold w-3/4 mx-auto text-lg">Verifique sua conexão com a internet ou tente novamente em alguns instantes</p>
+          <p className="font-semibold w-3/4 mx-auto text-lg md:text-xl">Verifique sua conexão com a internet ou tente novamente em alguns instantes</p>
         </div>
       )}
 
