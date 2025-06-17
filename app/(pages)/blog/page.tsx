@@ -9,7 +9,7 @@ import { Skeleton } from "@/app/components/Skeleton";
 
 export default function Blog() {
   const [news, setNews] = useState<undefined | News[]>(undefined);
-  const [headerNotice, setHeaderNotice] = useState<undefined | News>(undefined)
+  const [headerNotice, setHeaderNotice] = useState<undefined | News>(undefined);
   const [categories, setCategories] = useState<
     { value: string; selected: boolean }[] | undefined
   >(undefined);
@@ -43,7 +43,9 @@ export default function Blog() {
       .then((res) => res.json())
       .then((res: { news: News[] }) => {
         setTimeout(() => {
-          setHeaderNotice(res.news?.find(({id}) => id === 5) as News | undefined)
+          setHeaderNotice(
+            res.news?.find(({ id }) => id === 5) as News | undefined
+          );
           setNews(res.news as News[]);
           setCategories(
             mockedCategories.map((value) => ({ value, selected: false }))
@@ -60,13 +62,15 @@ export default function Blog() {
         <div className="mx-auto text-center max-w-[60rem] px-8 py-10">
           <h1 className="font-bold text-4xl">Confira nossas notícias</h1>
 
-          <div className="flex justify-between gap-4 mt-6 overflow-x-auto snap-mandatory">
+          <div className="flex justify-between gap-4 mt-6 overflow-x-auto overflow-y-clip snap-mandatory">
             {categories &&
-              categories.map((category) => (
+              categories.map((category, index) => (
                 <Chip
                   key={category.value}
+                  index={index}
                   title={category.value}
                   selected={category.selected}
+                  extraClasses={`show-opacity`}
                   onClick={() => toggleCategories(category.value)}
                 />
               ))}
@@ -91,8 +95,8 @@ export default function Blog() {
                 <Skeleton key={index} width="100%" height="235px" />
               ))}
 
-            {news?.map((news) => (
-              <NewsCard key={news.id} {...news} />
+            {news?.map((news, index) => (
+              <NewsCard key={news.id} index={index} {...news} />
             ))}
           </div>
         </div>

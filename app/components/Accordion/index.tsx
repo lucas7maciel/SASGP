@@ -11,9 +11,13 @@ export function Accordion(props: AccordionProps) {
   return (
     <div
       className={`
-      bg-primary hover:bg-primary-50 rounded-xl text-tertiary select-none
+      show-opacity bg-primary hover:bg-primary-50 rounded-xl text-tertiary select-none
       text-start px-4 py-3 w-full cursor-pointer
     `}
+    style={{
+      animationDuration: '450ms',
+      animationDelay: `${(props.index + 1) * 175 + 300}ms`
+    }}
       onClick={() => setOpen((open) => !open)}
     >
       <div className="flex items-center justify-start gap-2 p-1.5">
@@ -34,16 +38,20 @@ export function Accordion(props: AccordionProps) {
             open ? "opacity-100" : "opacity-0"
           }`}
         />
-        <p
-          className={`
+
+        {props.content.split("•").map((text, index) => (
+          <p
+            key={index}
+            className={`
           mt-1.5 transition-all delay-[${
             animationDuration * 0.75
           }ms] duration-[${animationDuration}] ${
-            open ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          {props.content}
-        </p>
+              open ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {index !== 0 && (<span className="font-bold mr-1">•</span>)}{text}
+          </p>
+        ))}
       </div>
     </div>
   );

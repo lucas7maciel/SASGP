@@ -2,11 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { MiniChip } from "./Chip";
 
-export function NewsCard(props: News) {
+interface NewsCardProps extends News {
+  index: number;
+  extraClasses?: string;
+}
+
+export function NewsCard(props: NewsCardProps) {
   return (
     <Link
       href={`/blog/${props.id}`}
-      className="flex items-stretch flex-col cursor-pointer hover:scale-[102%] -[-0.5rem] transition-all"
+      className={`show-fade flex items-stretch flex-col cursor-pointer hover:scale-[102%] -[-0.5rem] transition-all`}
+      style={{
+        animationDelay: `${props.index * 50}ms`
+      }}
     >
       <Image
         className="w-full h-20 rounded-t-2xl object-cover"

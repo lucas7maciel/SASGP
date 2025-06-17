@@ -2,14 +2,16 @@ import { Location } from "../localization";
 import { FAQ } from "./FAQ";
 import { HomeSection } from "./Home";
 import { PartnerShips } from "./Partnerships";
-import { Sections } from "./Sections";
+import Stats from "./Stats";
+// import { Sections } from "./Sections";
 import { Tender } from "./Tender";
 
 export default function Home() {
   return (
     <div className="w-full">
       <HomeSection />
-      <Sections />
+      <Stats />
+      {/* <Sections /> */}
       <Location />
       <Tender />
       <PartnerShips />

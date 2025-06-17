@@ -36,7 +36,7 @@ export function HomeSection() {
         Por trás de cada implantação eficiente, tem gente que entende de gente
       </h2>
 
-      <div className="w-full flex-center gap-12 mt-18 py-2">
+      <div className="w-full mt-18 py-2 hidden xl:flex items-center justify-center gap-8 xl:gap-12">
         <div className={`${secondaryCardStyles} ${styles["secondary-card"]}`}>
           <FontAwesomeIcon className="p-8" icon={faLightbulb} />
           <p className="font-bold text-3xl">Gestão de inovação</p>

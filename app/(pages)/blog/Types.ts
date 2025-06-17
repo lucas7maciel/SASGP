@@ -12,5 +12,7 @@ interface NewsCardProps {
 interface CategoryChipProps {
   title: string;
   selected?: boolean;
+  extraClasses?: string;
+  index?: number;
   onClick?: (category: string) => void;
 }

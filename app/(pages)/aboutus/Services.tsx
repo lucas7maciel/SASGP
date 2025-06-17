@@ -26,16 +26,22 @@ export function Services() {
   ];
 
   return (
-    <div className="p-8 bg-primary rounded-2xl text-center text-tertiary shadow-2xl">
-      <p className="font-bold text-3xl">Nossos serviços</p>
-      <p className="font-bold mx-auto mt-2 max-w-[50ch]">
+    <div
+      className={`p-8 bg-primary rounded-2xl text-center text-tertiary shadow-2xl`}
+    >
+      <p className="show-fade font-bold text-3xl">Nossos serviços</p>
+      <p className="show-fade anim-delay-200 font-bold mx-auto mt-2 max-w-[50ch]">
         Como Escritório de Projetos, a SAS utiliza as melhores práticas de
         gerenciamento de projetos baseadas no PMBOK
       </p>
 
       <div className="mt-10 flex flex-col md:flex-row items-stretch justify-between gap-6">
         {servicesData.map((service, index) => (
-          <Card key={index} {...service} />
+          <Card
+            key={index}
+            extraClasses={`show-fade anim-delay-${(index + 1) * 200}`}
+            {...service}
+          />
         ))}
       </div>
     </div>

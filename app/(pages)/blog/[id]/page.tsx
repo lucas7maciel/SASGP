@@ -18,6 +18,10 @@ async function getNewsData(id: string): Promise<News | null | undefined> {
   }
 }
 
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export async function generateMetadata(props: {
   params: Promise<{ id: string }>;
 }) {
@@ -47,6 +51,7 @@ export default async function NewsPage(props: {
   params: Promise<{ id: string }>;
 }) {
   const paramsRes = await props.params;
+  await sleep(1000);
   const news = await getNewsData(paramsRes.id);
 
   return (
@@ -78,7 +83,10 @@ export default async function NewsPage(props: {
           <p className="font-bold text-2xl md:text-3xl">
             Falha ao pesquisar por notícia
           </p>
-          <p className="font-semibold w-3/4 mx-auto text-lg md:text-xl">Verifique sua conexão com a internet ou tente novamente em alguns instantes</p>
+          <p className="font-semibold w-3/4 mx-auto text-lg md:text-xl">
+            Verifique sua conexão com a internet ou tente novamente em alguns
+            instantes
+          </p>
         </div>
       )}
 

@@ -7,8 +7,12 @@ export function Header(props: { notice: News | any }) {
   const notice = props.notice;
 
   return (
-    <div className="px-12 py-10 bg-primary flex items-center justify-center">
-      <div className="flex flex-col md:flex-row bg-tertiary rounded-3xl shadow-xl max-w-[50rem] overflow-hidden">
+    <div className={`px-12 py-10 bg-primary flex items-center justify-center`}>
+      <div
+        className={`flex flex-col md:flex-row bg-tertiary rounded-3xl shadow-xl max-w-[50rem] overflow-hidden ${
+          notice && "show-fade"
+        }`}
+      >
         {notice && (
           <Image
             className="object-cover rounded-b-3xl md:rounded-r-3xl shadow-xl md:shadow-2xl flex-[0_0_16rem] md:flex-[0_0_400px] h-[16rem] md:h-[17rem] w-full md:w-[400px]"

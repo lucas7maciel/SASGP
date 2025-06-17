@@ -4,4 +4,5 @@ export interface CardProps {
   title: string;
   description: string;
   icon: IconDefinition;
+  extraClasses?: string;
 }

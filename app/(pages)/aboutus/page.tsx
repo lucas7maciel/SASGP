@@ -22,7 +22,7 @@ export default function AboutUs() {
     <div className="flex flex-col gap-x-16 gap-y-8 py-8 px-12 max-w-[75rem]">
       <section className={`${sectionStyles} flex-col-reverse`}>
         <DecorativePic
-          extraClasses={`flex-1`}
+          extraClasses={`flex-1 show-fade anim-delay-200`}
           pics={[
             "/pictures/team4.JPG",
             "/pictures/team6.JPG",
@@ -35,7 +35,7 @@ export default function AboutUs() {
           alt="Equipe SASGP"
         />
 
-        <div className="flex-1 md:text-end">
+        <div className="flex-1 md:text-end show-fade anim-delay-400">
           <p className={titleStyles}>Quem é a SASGP?</p>
           <p className={paragraphStyles}>
             A SASGP nasceu em 17 de agosto de 2021 com um propósito claro:
@@ -54,7 +54,7 @@ export default function AboutUs() {
       </section>
 
       <section className={`${sectionStyles} flex-col`}>
-        <div className="flex-1 md:text-left md:text-secondary">
+        <div className="flex-1 md:text-left md:text-secondary show-fade anim-delay-600">
           <p className={titleStyles}>Nosso propósito</p>
           <p className={paragraphStyles}>
             O propósito final da empresa SASGP em Soluções é 
@@ -73,7 +73,7 @@ export default function AboutUs() {
         </div>
 
         <DecorativePic
-          extraClasses={`flex-1`}
+          extraClasses={`flex-1 show-fade anim-delay-800`}
           pics={[
             "/pictures/team5.JPG",
             "/pictures/team3.JPG",

@@ -16,8 +16,8 @@ export function PartnerShips() {
   return (
     <div className="text-center">
       <div className="px-10 md:px-16">
-        <h1 className="font-bold text-3xl">Projetos e Parceiros</h1>
-        <h2 className="font-semibold text-lg max-w-[40ch] mx-auto mt-1 mb-14">
+        <h1 className="show-fade font-bold text-3xl">Projetos e Parceiros</h1>
+        <h2 className="show-fade anim-delay-200 font-semibold text-lg max-w-[40ch] mx-auto mt-1 mb-14">
           Conheça algumas das empresas que confiaram e utilizam de nossa gestão
           de projetos
         </h2>

@@ -4,7 +4,10 @@ export function Chip(props: CategoryChipProps) {
       className={`cursor-pointer border rounded-full px-3 py-1 text-xl transition-all select-none
                   ${
                     props.selected ? "bg-primary text-tertiary" : "bg-tertiary hover:bg-gray-100"
-                  }`}
+                  } ${props.extraClasses}`}
+      style={{
+        animationDelay: `${((props.index ?? -1) + 1) * 30}ms`
+      }}
       onClick={() => {
         if (props.onClick) {
           props.onClick(props.title);

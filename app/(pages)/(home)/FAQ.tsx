@@ -14,8 +14,8 @@ export function FAQ() {
       title: "Quais serviços a SASGP oferece além da gestão de projetos?",
       content: `
         Além da gestão de projetos, a SASGP oferece serviços complementares que potencializam os resultados das implantações, como:
-        \n- Fábrica de software, por meio da nossa empresa parceira Kactux;
-        \n- Análise de perfil comportamental aplicada à formação e ao desempenho das equipes;
+        \n• Fábrica de software, por meio da nossa empresa parceira Kactux;
+        \n• Análise de perfil comportamental aplicada à formação e ao desempenho das equipes;
       `,
     },
     // {
@@ -52,20 +52,20 @@ export function FAQ() {
 
   return (
     <div className="px-8 py-16 md:p-20 text-center">
-      <h1 className="font-bold text-3xl">Perguntas Frequentes</h1>
-      <h2 className="font-semibold text-lg max-w-[40ch] mx-auto mt-1">
+      <h1 className="show-fade font-bold text-3xl">Perguntas Frequentes</h1>
+      <h2 className="show-fade anim-delay-200 font-semibold text-lg max-w-[40ch] mx-auto mt-1">
         Aqui você vai encontrar respostas para dúvidas comuns entre potenciais
         clientes da SASGP
       </h2>
 
       <div className="mt-6 py-2 flex items-center flex-col gap-3 mx-auto max-w-[50rem]">
         {questions.map((question, index) => (
-          <Accordion key={index} {...question} />
+          <Accordion key={index} index={index} {...question} />
         ))}
       </div>
 
       <div className="flex flex-wrap flex-col sm:flex-row items-center justify-between gap-x-18 gap-y-4 mx-auto mt-8 max-w-[50rem]">
-        <div className="flex-1">
+        <div className="flex-1 text-center">
           <p className="font-bold text-2xl mb-0.5 md:mb-auto">
             Alguma outra dúvida?
           </p>
@@ -74,6 +74,7 @@ export function FAQ() {
             responder!
           </p>
           <Image
+            className="mx-auto"
             src="/illustrations/FAQ.svg"
             alt="FAQ"
             width={500}

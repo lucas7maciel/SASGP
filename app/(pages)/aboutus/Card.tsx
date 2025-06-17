@@ -8,6 +8,7 @@ export function Card(props: CardProps) {
         flex flex-col items-center justify-center gap-6 
         p-4 bg-tertiary text-secondary rounded-xl md:aspect-square 
         shadow-[0_0_15px_0.5px_rgba(0,0,0,0.3)]
+        ${props.extraClasses}
       `}
     >
       <p className="font-bold text-2xl">{props.title}</p>
