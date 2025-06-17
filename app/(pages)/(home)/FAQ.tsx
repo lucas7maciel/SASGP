@@ -94,7 +94,7 @@ export function FAQ() {
             rows={3}
           />
           <Link href="/tender">
-            <p className="text-center bg-primary text-tertiary rounded-full px-6 py-2 font-bold">
+            <p className="text-center bg-primary hover:bg-primary-50 transition-all text-tertiary rounded-full px-6 py-2 font-bold">
               Envie sua dúvida
             </p>
           </Link>

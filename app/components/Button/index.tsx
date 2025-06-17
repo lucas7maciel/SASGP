@@ -9,7 +9,7 @@ interface ButtonProps {
 
 export function Button(props: ButtonProps) {
   return (
-    <MuiButton className="!bg-primary !text-tertiary !rounded-full !text-xl !font-bold !normal-case nunito !py-2">
+    <MuiButton className="!bg-primary hover!bg-primary-50 !text-tertiary !rounded-full !text-xl !font-bold !normal-case nunito !py-2 !transition-all">
       {props.text}
     </MuiButton>
   );

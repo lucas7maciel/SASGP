@@ -45,7 +45,6 @@ export function Header() {
   }
 
   function checkShowHeader() {
-    console.log("Checando show header", window);
     if (!window) return false;
 
     const currentScrollY = window.scrollY;
@@ -53,7 +52,6 @@ export function Header() {
     setOnTop(window.scrollY === 0);
     setPrevScrollY((prev) => {
       setShowHeader(prev === undefined || prev > currentScrollY);
-      console.log("Checando show header", prev, "-", currentScrollY);
       return currentScrollY;
     });
   }
@@ -104,7 +102,7 @@ export function Header() {
       </div>
       <div className="flex-center">
         <Link
-          className="font-semibold bg-primary text-tertiary text-xl rounded-full px-4 py-1.5 shadow"
+          className="font-semibold bg-primary hover:bg-primary-50 text-tertiary text-xl rounded-full px-4 py-1.5 shadow transition-all"
           href="https://sasgp.com.br/login-2/"
         >
           Entrar
@@ -117,7 +115,7 @@ export function Header() {
         className={`
           fixed top-0 z-50
           ${showHeader && !onTop && "shadow-lg"}
-          ${!showHeader && "top-[-70px]"}
+          ${!showHeader && "top-[-80px]"}
           flex items-center justify-between
           w-full px-4 py-4
           bg-tertiary shadow transition-all

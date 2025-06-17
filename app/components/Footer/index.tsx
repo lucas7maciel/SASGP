@@ -54,30 +54,30 @@ export function Footer() {
                 />
               </Link>
               <Link
-                className="hidden md:block bg-tertiary rounded-full px-4 py-2 text-xl text-center font-bold"
+                className="hidden md:block bg-tertiary hover:bg-gray-100 rounded-full px-4 py-2 text-xl text-center font-bold transition-all"
                 href="/tender"
               >
                 Fazer um orçamento
               </Link>
             </div>
 
-            <div className="flex gap-2.5 text-tertiary mt-4 md:mt-10">
+            <div className="flex gap-2.5 text-tertiary transition-all mt-4 md:mt-10">
               <Link
-                className="text-4xl"
+                className="text-4xl hover:text-gray-100 transition-all"
                 href="https://www.linkedin.com/company/sasgp-br/posts/?feedView=all"
                 target="__blank"
               >
                 <LinkedIn fontSize="inherit" />
               </Link>
               <Link
-                className="text-4xl"
+                className="text-4xl hover:text-gray-100 transition-all"
                 href="https://api.whatsapp.com/send/?phone=11981909659&text&type=phone_number&app_absent=0"
                 target="__blank"
               >
                 <WhatsApp fontSize="inherit" />
               </Link>
               <Link
-                className="text-4xl"
+                className="text-4xl hover:text-gray-100 transition-all"
                 href="https://www.instagram.com/sasgp.br/"
                 target="__blank"
               >

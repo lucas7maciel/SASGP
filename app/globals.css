@@ -3,6 +3,7 @@
 :root {
   --color-primary: #4225B3;
   --color-primary-70: rgba(66, 37, 179, 70);
+  --color-primary-50: #472cb3;
   --color-primary-40: #5237c0;
 
   --color-secondary: #f08c3e;
@@ -15,6 +16,7 @@
 @theme inline {
   --color-primary: var(--color-primary);
   --color-primary-70: var(--color-primary-70);
+  --color-primary-50: var(--color-primary-50);
   --color-primary-40: var(--color-primary-40);
 
   --color-secondary: var(--color-secondary);

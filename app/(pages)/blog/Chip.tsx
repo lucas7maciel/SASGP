@@ -3,7 +3,7 @@ export function Chip(props: CategoryChipProps) {
     <div
       className={`cursor-pointer border rounded-full px-3 py-1 text-xl transition-all select-none
                   ${
-                    props.selected ? "bg-primary text-tertiary" : "bg-tertiary"
+                    props.selected ? "bg-primary text-tertiary" : "bg-tertiary hover:bg-gray-100"
                   }`}
       onClick={() => {
         if (props.onClick) {
