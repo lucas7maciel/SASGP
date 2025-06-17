@@ -13,10 +13,10 @@ export function Header(props: Header) {
   const title = encodeURIComponent("Confira esta notícia de SASGP:")
   const summary = encodeURIComponent("Encontre mais notícias em nosso blog!")
   const currentUrl = encodeURIComponent(
-    window.location.href && "https://sasgp.vercel.app/blog/1"
+    window ? window.location.href : "https://sasgp.vercel.app/blog/1"
   );
   const postSource = encodeURIComponent(
-    window.location.hostname && "https://sasgp.vercel.app"
+    window ? window.location.hostname : "https://sasgp.vercel.app"
   );
 
   const whatsappLink = `https://wa.me/?text=${message}${currentUrl}`;

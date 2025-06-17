@@ -3,8 +3,8 @@ import Image from "next/image";
 export function Media(props: Media) {
   return (
     <>
-      {props.format === "image" && (
-        <div className="px-2 mt-8 w-full">
+      <div className="px-2 mt-8 w-full">
+        {["image", "gif"].includes(props.format) && (
           <Image
             className="object-cover w-full h-[375px] rounded-xl"
             src={props.url}
@@ -12,8 +12,24 @@ export function Media(props: Media) {
             width={1500}
             height={1500}
           />
-        </div>
-      )}
+        )}
+
+        {props.format === "video" && (
+          <video
+            className="object-cover w-full h-full rounded-xl"
+            width={"100%"}
+            height={"375px"}
+            autoPlay={true}
+            loop={true}
+            muted={true}
+            controls={true}
+            playsInline
+          >
+            <source src={props.url} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
+      </div>
     </>
   );
 }

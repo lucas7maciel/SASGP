@@ -18,7 +18,7 @@ interface Header {
 }
 
 interface Media {
-  format: "image";
+  format: "image" | "gif" | "video";
   url: string;
   alt: string;
   width?: number | `${number}${"px" | "rem" | "%"}`;

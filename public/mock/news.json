@@ -30,17 +30,31 @@
         },
         {
           "type": "media",
-          "format": "image",
-          "url": "/pictures/team1.webp",
-          "alt": "Segunda imagem"
+          "format": "gif",
+          "url": "/mocked_news/gif.gif",
+          "alt": "Primeiro gif"
         },
         {
           "type": "title",
-          "content": "Nova seção da matéria para ilustrar um conteúdo fictício!"
+          "content": "Uau! Um gif funcionando!"
         },
         {
           "type": "paragraph",
           "content": "Diante dos paradigmas contemporâneos, faz-se imperativo ressaltar a importância de uma abordagem holística que transcenda as dicotomias tradicionais, promovendo assim uma sinergia entre os múltiplos fatores paradigmas contemporâneos."
+        },
+        {
+          "type": "media",
+          "format": "video",
+          "url": "/mocked_news/video.mp4",
+          "alt": "Segunda imagem"
+        },
+        {
+          "type": "title",
+          "content": "Vídeos também!"
+        },
+        {
+          "type": "paragraph",
+          "content": "Agora vou colocar um parágrafo para finalizar"
         }
       ],
       "tags": ["Jogos", "Empresa", "Comida"]
