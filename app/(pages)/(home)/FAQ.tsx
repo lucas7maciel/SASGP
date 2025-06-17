@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function FAQ() {
-  const questions: AccordionProps[] = [
+  const questions: Accordion[] = [
     {
       title: "O que faz a SASGP?",
       content:
