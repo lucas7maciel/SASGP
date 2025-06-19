@@ -2,13 +2,13 @@ import { Skeleton } from "@/app/components/Skeleton";
 
 export default function Loading() {
   return (
-    <div className="pb-12 min-h-screen w-full max-w-[50rem] flex flex-col items-start">
+    <div className="pb-12 min-h-screen w-full max-w-[50rem] flex flex-col items-start mt-6">
       {/* Header */}
       <div className="px-9 w-full max-w-[50rem]">
-        <Skeleton extraClasses="rounded-full" width="180px" height="24px" />
+        <Skeleton extraClasses="rounded-full max-w-full" width="180px" height="24px" />
 
         <Skeleton
-          extraClasses="rounded-full mt-3"
+          extraClasses="rounded-full mt-3 max-w-full"
           width="400px"
           height="36px"
         />
@@ -22,9 +22,9 @@ export default function Loading() {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col items-center w-full max-w-[50rem] pb-12">
+      <div className="flex flex-col items-center w-full max-w-[50rem] px-6 pb-12">
         <Skeleton
-          extraClasses="px-2 mt-8 rounded-xl"
+          extraClasses="px-6 mt-8 rounded-xl"
           width="100%"
           height="375px"
         />

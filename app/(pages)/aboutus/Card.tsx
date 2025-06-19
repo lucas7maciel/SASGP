@@ -10,6 +10,9 @@ export function Card(props: CardProps) {
         shadow-[0_0_15px_0.5px_rgba(0,0,0,0.3)]
         ${props.extraClasses}
       `}
+      style={{
+        animationDelay: `${(props.index ?? 0 + 1) * 150}ms`
+      }}
     >
       <p className="font-bold text-2xl">{props.title}</p>
       <FontAwesomeIcon className="aspect-square !w-34 !h-34" icon={props.icon} />

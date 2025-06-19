@@ -1,5 +1,3 @@
-"use client";
-
 import { Add as AddIcon } from "@mui/icons-material";
 import { useState } from "react";
 
@@ -11,13 +9,13 @@ export function Accordion(props: AccordionProps) {
   return (
     <div
       className={`
-      show-opacity bg-primary hover:bg-primary-50 rounded-xl text-tertiary select-none
-      text-start px-4 py-3 w-full cursor-pointer
+        bg-primary hover:bg-primary-50 rounded-xl text-tertiary anim-backwards
+        select-none text-start px-4 py-3 w-full cursor-pointer show-opacity
     `}
-    style={{
-      animationDuration: '450ms',
-      animationDelay: `${(props.index + 1) * 175 + 300}ms`
-    }}
+      style={{
+        animationDuration: "450ms",
+        animationDelay: `${(props.index + 1) * 175 + 300}ms`,
+      }}
       onClick={() => setOpen((open) => !open)}
     >
       <div className="flex items-center justify-start gap-2 p-1.5">
@@ -49,7 +47,8 @@ export function Accordion(props: AccordionProps) {
               open ? "opacity-100" : "opacity-0"
             }`}
           >
-            {index !== 0 && (<span className="font-bold mr-1">•</span>)}{text}
+            {index !== 0 && <span className="font-bold mr-1">•</span>}
+            {text}
           </p>
         ))}
       </div>

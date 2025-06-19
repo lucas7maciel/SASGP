@@ -3,15 +3,20 @@
 import {
   ChevronLeft,
   LinkedIn,
+  ShareRounded,
   WhatsApp,
   X,
 } from "@mui/icons-material";
+import { ClickAwayListener } from "@mui/material";
 import Link from "next/link";
+import { useState } from "react";
 
 export function Header(props: Header) {
+  const [openShare, setOpenShare] = useState(false);
+
   const message = "Confira esta notícia de SASGP: \n";
-  const title = encodeURIComponent("Confira esta notícia de SASGP:")
-  const summary = encodeURIComponent("Encontre mais notícias em nosso blog!")
+  const title = encodeURIComponent("Confira esta notícia de SASGP:");
+  const summary = encodeURIComponent("Encontre mais notícias em nosso blog!");
   const currentUrl = encodeURIComponent(
     window ? window.location.href : "https://sasgp.vercel.app/blog/1"
   );
@@ -38,24 +43,46 @@ export function Header(props: Header) {
         {props.description}
       </h2>
 
-      <p className="mt-2">
-        Por <span className="font-bold">{props.author}</span>
-        <span className="px-2">•</span>
-        <span className="font-bold">{props.date}</span>
-      </p>
+      <div className="flex items-center gap-2.5 mt-2">
+        <p className="leading-none flex items-center gap-1.5 truncate">
+          Por <span className="font-bold">{props.author}</span>
+          <span className="">•</span>
+          <span className="font-bold">{props.date}</span>
+        </p>
 
-      <div>
-        <p className="font-semibold">Compartilhar notícia</p>
-        <div className="flex items-center gap-2 text-3xl">
-          <Link href={linkedinLink} target="__blank">
-            <LinkedIn fontSize="inherit" />
-          </Link>
-          <Link href={whatsappLink} target="__blank">
-            <WhatsApp fontSize="inherit" />
-          </Link>
-          <Link href={xLink} target="__blank">
-            <X fontSize="inherit" />
-          </Link>
+        <div className="relative">
+          <div
+            onClick={() =>
+              setOpenShare((open) => {
+                console.log("Open", !open);
+                return !open;
+              })
+            }
+          >
+            <ShareRounded className="!cursor-pointer hover:!opacity-70 !text-base !transition-all !mb-1" />
+
+            <ClickAwayListener onClickAway={() => {}}>
+              <div
+                className={`${
+                  !openShare ? "scale-0 opacity-0" : "scale-100 opacity-100"
+                } origin-top-right md:origin-top-left absolute top-full left-0 bg-tertiary shadow-lg transition-all
+                  px-3 py-2.5 rounded-xl
+          `}
+              >
+                <div className="flex items-center gap-3.5 text-4xl">
+                  <Link href={linkedinLink} target="__blank">
+                    <LinkedIn fontSize="inherit" />
+                  </Link>
+                  <Link href={whatsappLink} target="__blank">
+                    <WhatsApp fontSize="inherit" />
+                  </Link>
+                  <Link href={xLink} target="__blank">
+                    <X fontSize="inherit" />
+                  </Link>
+                </div>
+              </div>
+            </ClickAwayListener>
+          </div>
         </div>
       </div>
     </div>

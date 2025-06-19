@@ -1,13 +1,33 @@
+"use client";
+
+import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 
 export default function Stats() {
+  const { ref, inView } = useInView({
+    threshold: 0.15,
+    triggerOnce: true,
+    initialInView: false,
+  });
+
   return (
-    <div className="p-10 bg-gradient-to-b from-[var(--color-primary)] to-[var(--color-tertiary)] text-white">
+    <div
+      ref={ref}
+      className="p-10 bg-gradientt-to-b bg-primary from-[var(--color-primary)] to-[vafr(--color-tertiary)] text-tertiary"
+    >
       <div className="max-w-4xl mx-auto text-center mb-10">
-        <h2 className="show-fade anim-delay-400 text-4xl font-bold mb-4">
+        <h2
+          className={`${
+            !inView && "anim-paused"
+          } show-fade anim-delay-400 text-4xl font-bold mb-2`}
+        >
           Impacto que impulsiona o futuro
         </h2>
-        <p className="show-fade anim-delay-600 text-base text-white/90 max-w-3xl mx-auto mb-4">
+        <p
+          className={`${
+            !inView && "anim-paused"
+          } show-fade anim-delay-600 font-semibold text-base text-tertiary max-w-3xl mx-auto mb-4`}
+        >
           Nossas métricas não são apenas números — são provas do nosso avanço
           contínuo, da nossa inovação constante e do valor real que entregamos
           aos nossos parceiros e usuários.
@@ -16,7 +36,13 @@ export default function Stats() {
 
         {/* Botão como Link */}
         <Link href="/tender">
-          <span className="show-fade anim-delay-800 inline-block bg-primary text-white text-[20px] px-[40px] py-[7px] rounded-full font-semibold shadow-md hover:bg-primary-50 transition-all">
+          <span
+            className={`
+              inline-block bg-tertiary font-bold text-primary
+              text-2xl px-[40px] py-[7px] rounded-full shadow-md
+              hover:bg-gray-100 transition-all show-fade anim-delay-800
+              ${!inView && "anim-paused"}`}
+          >
             Fazer um orçamento
           </span>
         </Link>
@@ -32,9 +58,13 @@ export default function Stats() {
         ].map((item, index) => (
           <div
             key={index}
-            className="show-fade w-full text-center md:text-start md:max-w-[195px] bg-white/10 text-white border-l-4 border-white/40 p-6 rounded-md shadow-md"
+            className={`
+              w-full text-center md:text-start md:max-w-[195px] bg-white/10 show-fade transition-all
+            text-tertiary border-l-4 border-white/40 p-6 rounded-md shadow-md hover:translate-y-[-0.25rem]
+              ${!inView && "anim-paused"}
+            `}
             style={{
-                animationDelay: `${(index + 1) * 80 + 800}ms`
+              animationDelay: `${(index + 1) * 80 + 800}ms`,
             }}
           >
             <h3 className="text-3xl font-bold mb-1">{item.title}</h3>

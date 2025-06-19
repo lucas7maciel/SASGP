@@ -50,12 +50,20 @@
   transform: translate(-50%, -50%);
 }
 
+.anim-paused {
+  animation-play-state: paused;
+}
+
 .show-fade {
   animation: show-fade 0.4s ease-out backwards;
 }
 
 .show-opacity {
   animation: show-opacity 0.6s ease-out backwards;
+}
+
+.anim-paused {
+  animation-play-state: paused;
 }
 
 .anim-delay-200 {

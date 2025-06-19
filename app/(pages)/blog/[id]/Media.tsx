@@ -3,7 +3,7 @@ import Image from "next/image";
 export function Media(props: Media) {
   return (
     <>
-      <div className="px-2 mt-8 w-full">
+      <div className="px-7 md:px-2 mt-8 w-full">
         {["image", "gif"].includes(props.format) && (
           <Image
             className="object-cover w-full h-[375px] rounded-xl"

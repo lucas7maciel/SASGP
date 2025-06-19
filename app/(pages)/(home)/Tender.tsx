@@ -1,8 +1,16 @@
+"use client"
+
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
 
 export function Tender() {
+  const { ref, inView } = useInView({
+    threshold: 0.15,
+    triggerOnce: true,
+  });
+
   return (
-    <div className="show-fade anim-delay px-8 pb-16 md:px-20">
+    <div ref={ref} className={`${!inView && 'anim-paused'} show-fade anim-delay-200 px-8 pb-24 md:px-20`}>
       <div className="bg-primary px-6 md:px-14 py-8 font-bold text-center text-tertiary rounded-3xl shadow-lg mx-auto max-w-[40rem]">
         <p className="text-3xl">Transforme seu Projeto!</p>
         <p className="mx-auto mt-1 mb-4 max-w-[45ch]">

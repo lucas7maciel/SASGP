@@ -1,3 +1,6 @@
+"use client"
+
+import { useInView } from "react-intersection-observer";
 import { Card } from "./Card";
 import { CardProps } from "./Types";
 import {
@@ -7,6 +10,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export function Services() {
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+    triggerOnce: true,
+  });
+
   const servicesData: CardProps[] = [
     {
       title: "Escritório de Projetos",
@@ -27,10 +35,11 @@ export function Services() {
 
   return (
     <div
+      ref={ref}
       className={`p-8 bg-primary rounded-2xl text-center text-tertiary shadow-2xl`}
     >
-      <p className="show-fade font-bold text-3xl">Nossos serviços</p>
-      <p className="show-fade anim-delay-200 font-bold mx-auto mt-2 max-w-[50ch]">
+      <p className={`${!inView && 'anim-paused'} show-fade font-bold text-3xl`}>Nossos serviços</p>
+      <p className={`${!inView && 'anim-paused'} show-fade anim-delay-200 font-bold mx-auto mt-2 max-w-[50ch]`}>
         Como Escritório de Projetos, a SAS utiliza as melhores práticas de
         gerenciamento de projetos baseadas no PMBOK
       </p>
@@ -39,7 +48,8 @@ export function Services() {
         {servicesData.map((service, index) => (
           <Card
             key={index}
-            extraClasses={`show-fade anim-delay-${(index + 1) * 200}`}
+            index={index}
+            extraClasses={`show-fade ${!inView && 'anim-paused'}`}
             {...service}
           />
         ))}

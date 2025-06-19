@@ -91,7 +91,7 @@ export default async function NewsPage(props: {
       )}
 
       {news && (
-        <div className="flex flex-col items-center max-w-[50rem] pb-12">
+        <div className="flex flex-col items-center max-w-[50rem] mt-6 pb-12">
           <Header {...news.header} />
           <hr />
           {news.content.map((block, index) => {

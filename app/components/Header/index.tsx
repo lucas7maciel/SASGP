@@ -117,7 +117,7 @@ export function Header() {
         className={`
           fixed top-0 z-50
           ${showHeader && !onTop && "shadow-lg"}
-          ${!showHeader && "top-[-80px]"}
+          ${!showHeader && !open && "top-[-80px]"}
           flex md:hidden items-center justify-between
           w-full px-4 py-4
           bg-tertiary shadow transition-all
@@ -158,7 +158,7 @@ export function Header() {
           }
         }}
       >
-        <div className="flex flex-col items-stretch justify-between gap-12 max-w-[30rem] h-full bg-tertiary px-5 pt-20 pb-4 shadow-2xl">
+        <div className="flex flex-col items-stretch justify-between gap-12 max-w-[30rem] h-screen bg-tertiary px-5 pt-20 pb-4 shadow-2xl">
           <div
             className={`flex-1 flex-center flex-col gap-2 transition-all  ${
               !open ? "opacity-0" : "opacity-100 duration-[800ms] delay-[400ms]"

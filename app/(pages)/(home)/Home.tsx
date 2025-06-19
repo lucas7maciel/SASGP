@@ -1,3 +1,5 @@
+"use client"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb, faMedal } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Home.module.css";
@@ -5,13 +7,13 @@ import Image from "next/image";
 
 export function HomeSection() {
   const secondaryCardStyles = `
-    flex-[0_0_24rem] flex-center flex-col gap-4 
+    flex-[0_0_24rem] flex-center flex-col gap-2.5 
     !h-[20rem] !w-[28rem] p-6 text-secondary text-center
     bg-tertiary rounded-2xl shadow-[0_0_15px_0.5px_rgba(0,0,0,0.3)]
   `;
 
   return (
-    <div className="min-h-[95vh] relative flex-center flex-col text-center overflow-hidden">
+    <div className="min-h-[95vh] relative flex-center flex-col px-8 py-16 text-center overflow-hidden">
       {/* Gradientes decorativos */}
       <div
         style={{
@@ -27,18 +29,18 @@ export function HomeSection() {
         classes={`hidden md:block absolute z-[-1] top-0 right-[-7.5rem] h-full w-auto scale-x-[-1] ${styles["oval-gradient"]}`}
       />
 
-      <h1 className={`font-bold text-6xl ${styles.title}`}>
+      <h1 className={`font-bold text-4xl xl:text-6xl ${styles.title}`}>
         Gestão que entrega valor
       </h1>
       <h2
-        className={`font-semibold text-2xl w-[35ch] mt-2 mx-auto ${styles.subtitle}`}
+        className={`font-semibold text-xl xl:text-2xl w-full max-w-[35ch] mt-2 mx-auto ${styles.subtitle}`}
       >
         Por trás de cada implantação eficiente, tem gente que entende de gente
       </h2>
 
       <div className="w-full mt-18 py-2 hidden xl:flex items-center justify-center gap-8 xl:gap-12">
         <div className={`${secondaryCardStyles} ${styles["secondary-card"]}`}>
-          <FontAwesomeIcon className="p-8" icon={faLightbulb} />
+          <FontAwesomeIcon className="!w-[60%] !h-[60%] px-8 py-4" icon={faLightbulb} />
           <p className="font-bold text-3xl">Gestão de inovação</p>
         </div>
 
@@ -55,7 +57,7 @@ export function HomeSection() {
         </div>
 
         <div className={`${secondaryCardStyles} ${styles["secondary-card"]}`}>
-          <FontAwesomeIcon className="p-8" icon={faMedal} />
+          <FontAwesomeIcon className="!w-[60%] !h-[60%] px-8 py-4" icon={faMedal} />
           <p className="font-bold text-3xl">Gestão de inovação</p>
         </div>
       </div>

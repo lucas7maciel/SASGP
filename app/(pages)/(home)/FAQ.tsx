@@ -1,9 +1,17 @@
+"use client";
+
 import { Accordion } from "@/app/components/Accordion";
 import { TextField } from "@/app/components/TextField";
 import Image from "next/image";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
 
 export function FAQ() {
+  const { ref, inView } = useInView({
+    threshold: 0.25,
+    triggerOnce: true,
+  });
+
   const questions: Accordion[] = [
     {
       title: "O que faz a SASGP?",
@@ -51,9 +59,9 @@ export function FAQ() {
   ];
 
   return (
-    <div className="px-8 py-16 md:p-20 text-center">
-      <h1 className="show-fade font-bold text-3xl">Perguntas Frequentes</h1>
-      <h2 className="show-fade anim-delay-200 font-semibold text-lg max-w-[40ch] mx-auto mt-1">
+    <div ref={ref} className="px-8 py-16 md:p-20 text-center">
+      <h1 className={`${!inView && 'anim-paused'} show-fade font-bold text-3xl`}>Perguntas Frequentes</h1>
+      <h2 className={`${!inView && 'anim-paused'} show-fade anim-delay-200 font-semibold text-lg max-w-[40ch] mx-auto mt-1`}>
         Aqui você vai encontrar respostas para dúvidas comuns entre potenciais
         clientes da SASGP
       </h2>
